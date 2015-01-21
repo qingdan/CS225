@@ -1,0 +1,93 @@
+% -----------------------------*- LaTeX -*------------------------------
+%
+%   handout.sty -- definitions for notes, class handouts, homeworks,
+%   		   exams, and so forth.
+%
+% ----------------------------------------------------------------------
+
+% set one-inch margins all around, NOT counting the headers and footers
+
+\RequirePackage[margin=1in]{geometry}
+
+%
+%  \headers{left}{middle}{right} -- set up boldface underlined headers
+%	left	-- left header item
+%	middle	-- middle header item
+%	right	-- right header item
+%  
+%  \headers{CS 170}{Final Exam}{Fall 1992}
+%  \headers{CS 277}{Homework 1 (9/15/92)}{Jeff Erickson}
+%
+\newcommand{\headers}[3]{
+   \newpage\setcounter{page}{1}
+   \def\@oddhead{$\underline{\hbox to\textwidth{%
+	\textbf{\rlap{#1}\phantom{hj}\hfill #2 \hfill \llap{#3}}}}$}
+   \def\@oddfoot{\hfill\thepage\hfill}
+}
+
+%
+%  ``Problems'' environment.
+%  Just like ``enumerate'', except (try to) indent second and
+%  succeeding paragraphs in each item, and (try to) separate items by
+%  as much space as possible.  Doesn't work very well.
+%
+\newlength\tmplen
+\newcounter{probnum}[section]
+\newenvironment{problems}
+{\tmplen=\parindent\begin{enumerate}\parindent=\tmplen\itemsep=3ex plus 0.1fil}
+{\setcounter{probnum}{\theenumi}\end{enumerate}}
+
+%
+%  Official solution environment.
+%
+\newsavebox{\solnbox}
+\newlength{\solnwidth}
+\newenvironment{soln}%
+{\setlength{\solnwidth}{\linewidth}
+\addtolength{\solnwidth}{-2\fboxsep}\addtolength{\solnwidth}{-2\fboxrule}
+\par\nobreak\begin{lrbox}{\solnbox}\begin{minipage}[t]{\solnwidth}
+\small\parindent=1pc\noindent\ignorespaces}
+{\end{minipage}\end{lrbox}\medskip\noindent\fbox{\usebox{\solnbox}}\bigbreak}
+
+%
+%  This is much better!
+%
+\newproof{solution}{Solution}(\normalsize\rm\parindent1.5em)[\markatright{$\blacksquare$}]
+\newenvironment{Solution}{\normalsize\rm\begin{solution}\parindent1em}
+{\end{solution}}
+
+%
+%  \hidesolutions does just what it sounds like.
+%
+\RequirePackage{verbatim}
+\def\hidesolutions{\let\soln\comment\let\endsoln\endcomment
+\let\solution\comment\let\endsolution\endcomment} 
+
+%
+%  Add stars and other marks in front of enumerated items.
+%
+\def\itemstars{}
+\def\itemding{}
+\def\resetmarks{\xdef\itemding{}\xdef\itemstars{}}
+\def\Hard{\def\itemstars{$^\star$}}
+\def\ReallyHard{\def\itemstars{$^\bigstar$}}
+\def\ReallyReallyHard{\def\itemstars{{\Large$\bigstar$}}}
+\def\ugradmark{{\large $\blacktriangleright$}}
+\def\gradmark{{\large $\rhd$}}
+\def\Ugrad{\def\itemding{\ugradmark}}
+\def\Grad{\def\itemding{\gradmark}}
+
+\def\Hint#1{\textsl{[Hint: #1]}}
+\def\labelenumi{\llap{\itemding\itemstars}\theenumi.\resetmarks}
+\def\labelenumii{\llap{\itemding\itemstars}(\theenumii)\resetmarks}
+
+%
+%  ``Exercise'' environment (for course notes)
+%
+\newproof{exercise}{Exercise}
+
+%
+%  Inline figure environment
+%
+\newenvironment{inline}{\begin{center}\footnotesize\sf}{\end{center}}
+
