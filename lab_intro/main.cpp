@@ -60,13 +60,13 @@ PNG brighten(PNG original, int amount)
             /// Your code here!
 	    if( original(xi,yi)->red + amount <= 255)
 	      original(xi,yi)->red +=  amount;
-	      original(xi,yi)->red = 255;
+	    else  original(xi,yi)->red = 255;
           if( original(xi,yi)->green + amount <= 255)
 	      original(xi,yi)->green +=  amount;
-	      original(xi,yi)->green = 255;
+	   else   original(xi,yi)->green = 255;
           if( original(xi,yi)->blue + amount <= 255)
 	      original(xi,yi)->blue +=  amount;
-	      original(xi,yi)->blue = 255;
+	   else   original(xi,yi)->blue = 255;
 	    
         }
     }
