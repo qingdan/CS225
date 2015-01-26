@@ -1,0 +1,39 @@
+Grading revision r2401 by kwang40, dated 2015-01-24 16:48:07.000752904 -0600 CST
+Monad Autograder
+Testing lab_intro at 2015-01-26 00:38:17
+
+"One day I will shoot you with this bullet. Can you still say that you love me?" ~ Re-l Mayer
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testBrighten  . [33 pts] - FAILED: unit_tests.cpp:59: [(int)brightened(x, y)->red => 255] != [image(x, y)->red + 100 => 100]
+testCrosshairs  [33 pts] - passed
+testBlendImages [34 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 67
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+testBrighten [33 points]
+Result: FAILED: unit_tests.cpp:59: [(int)brightened(x, y)->red => 255] != [image(x, y)->red + 100 => 100]
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 67
+
