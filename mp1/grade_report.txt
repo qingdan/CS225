@@ -1,8 +1,8 @@
 Grading revision r2728 by kwang40, dated 2015-01-25 16:06:13.000974583 -0600 CST
 Monad Autograder
-Testing mp1 at 2015-01-28 00:26:00
+Testing mp1 at 2015-01-28 02:05:57
 
-"There's an old story about the person who wished his computer were as easy to use as his telephone. That wish has come true, since I no longer know how to use my telephone." ~ Bjarne Stroustrup
+"Anti-intellectualism has been a constant thread winding its way through our political and cultural life, nurtured by the false notion that democracy means that 'my ignorance is just as good as your knowledge.'" ~ Isaac Asimov
 
 Setting up test environment...
 Compiling...
