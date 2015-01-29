@@ -35,7 +35,6 @@ void sketchify()
 
 	// Create out.png
 	PNG * output;
-	output = new PNG();
 	output=setupOutput(width, height);	
 
 	// Load our favorite color to color the outline
