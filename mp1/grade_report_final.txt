@@ -1,0 +1,35 @@
+Grading revision r4260 by tolar2, dated 2015-01-28 02:23:57.00071011 -0600 CST
+Monad Autograder
+Testing mp1 at 2015-02-04 00:27:45
+
+"Your job is not just what you're doing; it should be preparing you for what you want to do." ~ Michael Lopp
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+RGBAPixel_default_ctor [5 pts]  - passed
+RGBAPixel_three_ctor . [10 pts] - passed
+in_01_png  . . . . . . [5 pts]  - passed
+in_02_png  . . . . . . [5 pts]  - passed
+in_03_png  . . . . . . [5 pts]  - passed
+in_04_png  . . . . . . [5 pts]  - passed
+in_05_png  . . . . . . [5 pts]  - passed
+in_06_png  . . . . . . [5 pts]  - passed
+in_07_png  . . . . . . [5 pts]  - passed
+in_08_png  . . . . . . [5 pts]  - passed
+in_09_png  . . . . . . [5 pts]  - passed
+in_10_png  . . . . . . [5 pts]  - passed
+in_11_png  . . . . . . [5 pts]  - passed
+in_12_png  . . . . . . [5 pts]  - passed
+in_13_png  . . . . . . [5 pts]  - passed
+Makefile . . . . . . . [20 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
