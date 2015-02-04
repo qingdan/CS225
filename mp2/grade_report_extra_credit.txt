@@ -1,0 +1,26 @@
+Grading revision r5736 by kwang40, dated 2015-01-31 16:17:02.000400768 -0600 CST
+Monad Autograder
+Testing mp2.1 at 2015-02-04 01:00:39
+
+"Worry loudly now or scream louder later." ~ Michael Lopp
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+InvertColorsEven  . . [30 pts] - passed
+FlipLeftEven  . . . . [15 pts] - passed
+FlipLeftOdd . . . . . [15 pts] - passed
+AdjustBrightnessEven  [10 pts] - passed
+AdjustBrightnessEven2 [10 pts] - passed
+AdjustBrightnessEven3 [10 pts] - passed
+ImageMakefile . . . . [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
