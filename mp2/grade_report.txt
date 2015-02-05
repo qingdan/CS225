@@ -1,0 +1,8 @@
+Grading revision r6795 by tolar2, dated 2015-02-04 01:17:05.000917631 -0600 CST
+Monad Autograder
+Testing mp2 at 2015-02-05 00:30:31
+
+"It always takes longer than you expect, even when you take into account Hofstadter's Law." ~ Hofstadter's Law
+
+Setting up test environment...
+Error: /dev/shm/cs225student/autograder/temp/mp2/scene.h does not exist.
