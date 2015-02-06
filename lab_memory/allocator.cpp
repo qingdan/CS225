@@ -13,9 +13,12 @@ using namespace std;
  */
 Allocator::Allocator(const string & studentFile, const string & roomFile)
 {
+	studentCount = 0;
+	roomCount = 0;
 	createLetterGroups();
 	loadStudents(studentFile);
 	loadRooms(roomFile);
+
 }
 
 /**
@@ -63,11 +66,14 @@ void Allocator::loadRooms(const string & file)
 	int i = 0;
 	while (fileio::areMoreRooms())
 	{
+
 		rooms[i] = fileio::nextRoom();
 		totalCapacity += rooms[i].capacity;
 		i++;
 	}
-	delete [] rooms;
+
+	
+
 }
 
 void Allocator::printStudents()
@@ -76,8 +82,7 @@ void Allocator::printStudents()
 	cout << "Student counts (" << studentCount << " total)" << endl;
 	for (int i = 0; i < 26; i++)
 		cout << alpha[i].letter << ": " << alpha[i].count << endl;
-        if (alpha != NULL)
-         delete [] alpha;
+        
 }
 
 /**
@@ -153,4 +158,13 @@ Room * Allocator::largestOpening()
 		}
 	}
 	return &rooms[index];
+}
+
+Allocator::~Allocator()
+{
+
+	delete [] rooms;
+        delete [] alpha;
+
+
 }

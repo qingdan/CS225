@@ -95,9 +95,10 @@ void Room::copy(const Room & other)
 	capacity    = other.capacity;
 	count       = other.count;
 	letterCount = other.letterCount;
+	max_letters = other.max_letters;
 	//letters     = other.letters;
-        letters = new Letter [letterCount];
-        for(int i = 0; i < letterCount;  i++)
+        letters = new Letter [max_letters];
+        for(int i = 0; i < max_letters;  i++)
            {
              letters[i] = other.letters[i];
 
