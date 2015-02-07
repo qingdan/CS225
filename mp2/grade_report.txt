@@ -1,8 +1,8 @@
-Grading revision r6973 by tolar2, dated 2015-02-05 00:51:06.000732729 -0600 CST
+Grading revision r7452 by tolar2, dated 2015-02-06 00:50:07.000028477 -0600 CST
 Monad Autograder
-Testing mp2 at 2015-02-06 00:30:28
+Testing mp2 at 2015-02-07 00:28:52
 
-"Fish are meat, they're like water poultry." ~ Chase Geigle
+"A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools." ~ Douglas Adams
 
 Setting up test environment...
 Error: /dev/shm/cs225student/autograder/temp/mp2/scene.h does not exist.
