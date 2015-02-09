@@ -1,0 +1,24 @@
+Grading revision r7453 by kwang40, dated 2015-02-06 00:52:14.000207968 -0600 CST
+Monad Autograder
+Testing lab_memory at 2015-02-09 00:35:58
+
+"To iterate is human, to recurse divine." ~ L. Peter Deutsch
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_constructor (asan) [5 pts]  - passed
+test_allocate (asan)  . [5 pts]  - passed
+test_printrooms (asan)  [20 pts] - passed
+test_any_output . . . . [30 pts] - passed
+test_correct_output . . [40 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
