@@ -1,8 +1,8 @@
-Grading revision r7850 by tolar2, dated 2015-02-07 00:48:10.000167736 -0600 CST
+Grading revision r8244 by tolar2, dated 2015-02-08 00:57:52.000435658 -0600 CST
 Monad Autograder
-Testing mp2 at 2015-02-08 00:35:00
+Testing mp2 at 2015-02-09 01:20:02
 
-"At least for a while, in your heart of hearts you'll be confident only that the university will soon enough discover its error in awarding you the PhD, and at some point will brand you (in public no doubt) the fraud you know you are. This too will pass as you come to realize that students are extremely gullible and many of your colleagues are even greater frauds than you." ~ Berkeley PhD Advice
+"If you think you can do it all, you're thinking too small." ~ Michael Lopp
 
 Setting up test environment...
 Error: /dev/shm/cs225student/autograder/temp/mp2/scene.h does not exist.
