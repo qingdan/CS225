@@ -12,8 +12,7 @@ using std::uint8_t;
 class Image : public PNG
 {    public:
     // the function definitions from the Doxygen go here
-
-  Image(){};/*creates a default contructor*/
+ using PNG::PNG;
  void flipleft();
  void adjustbrightness (int r, int g, int b);
  void invertcolors ();
