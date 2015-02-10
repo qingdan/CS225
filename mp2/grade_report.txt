@@ -1,8 +1,8 @@
-Grading revision r8244 by tolar2, dated 2015-02-08 00:57:52.000435658 -0600 CST
+Grading revision r8949 by tolar2, dated 2015-02-09 01:41:52.000959323 -0600 CST
 Monad Autograder
-Testing mp2 at 2015-02-09 01:20:02
+Testing mp2 at 2015-02-10 00:30:44
 
-"If you think you can do it all, you're thinking too small." ~ Michael Lopp
+"We are what we repeatedly do. Excellence, then, is not an act, but a habit." ~ Aristotle
 
 Setting up test environment...
 Error: /dev/shm/cs225student/autograder/temp/mp2/scene.h does not exist.
