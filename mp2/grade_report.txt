@@ -1,8 +1,54 @@
-Grading revision r8949 by tolar2, dated 2015-02-09 01:41:52.000959323 -0600 CST
+Grading revision r9746 by kwang40, dated 2015-02-10 03:53:39.000615687 -0600 CST
 Monad Autograder
-Testing mp2 at 2015-02-10 00:30:44
+Testing mp2 at 2015-02-11 00:33:59
 
-"We are what we repeatedly do. Excellence, then, is not an act, but a habit." ~ Aristotle
+"If at first you don't succeed, that's one data point." ~ Randall Munroe
 
 Setting up test environment...
-Error: /dev/shm/cs225student/autograder/temp/mp2/scene.h does not exist.
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+InvertColorsEven . . . . . . . . . [8 pts] - passed
+FlipLeftEven . . . . . . . . . . . [4 pts] - passed
+FlipLeftOdd  . . . . . . . . . . . [4 pts] - passed
+AdjustBrightnessEven . . . . . . . [3 pts] - passed
+AdjustBrightnessEven2  . . . . . . [3 pts] - passed
+AdjustBrightnessEven3  . . . . . . [3 pts] - passed
+ImageMakefile  . . . . . . . . . . [5 pts] - passed
+Valgrind1 (asan) . . . . . . . . . [5 pts] - passed
+AddPictureValidIndex . . . . . . . [2 pts] - passed
+AddPictureInvalidIndex . . . . . . [2 pts] - passed
+ImageAssignmentOperator  . . . . . [2 pts] - passed
+SceneGetPictureInvalidIndex  . . . [2 pts] - passed
+SceneChangeMaxLayersLarger . . . . [2 pts] - passed
+SceneChangeMaxLayersSmaller (asan) [1 pts] - passed
+SceneChangeMaxLayersInvalidChange  [2 pts] - passed
+SceneCopyCtor  . . . . . . . . . . [2 pts] - passed
+SceneCopyCtor2 . . . . . . . . . . [2 pts] - passed
+SceneAssignmentOperator  . . . . . [2 pts] - passed
+SceneAssignmentOperator2 . . . . . [2 pts] - passed
+SceneChangeLayer . . . . . . . . . [2 pts] - passed
+SceneChangeLayerInvalid  . . . . . [2 pts] - passed
+SceneDrawScene . . . . . . . . . . [3 pts] - passed
+SceneDrawScene2  . . . . . . . . . [3 pts] - passed
+SceneDrawScene3  . . . . . . . . . [3 pts] - passed
+SceneDrawScene4  . . . . . . . . . [3 pts] - passed
+SceneDrawSceneChangeLayer  . . . . [2 pts] - passed
+SceneDrawSceneDeletePicture  . . . [2 pts] - passed
+SceneDrawSceneTranslate  . . . . . [2 pts] - passed
+SceneDrawSceneTranslate2 . . . . . [2 pts] - passed
+SceneTranslateInvalid  . . . . . . [2 pts] - passed
+SceneTranslateInvalid2 . . . . . . [1 pts] - passed
+SceneDeletePictureInvalid  . . . . [2 pts] - passed
+Valgrind2 (asan) . . . . . . . . . [5 pts] - passed
+Valgrind3 (asan) . . . . . . . . . [5 pts] - FAILED
+SceneMakefile  . . . . . . . . . . [5 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 95
+
