@@ -1,8 +1,8 @@
-Grading revision r9746 by kwang40, dated 2015-02-10 03:53:39.000615687 -0600 CST
+Grading revision r10199 by tolar2, dated 2015-02-11 00:58:50.000000915 -0600 CST
 Monad Autograder
-Testing mp2 at 2015-02-11 00:33:59
+Testing mp2 at 2015-02-12 00:33:34
 
-"If at first you don't succeed, that's one data point." ~ Randall Munroe
+"It's like comparing a small apple with a medium-sized apple." ~ Jason Cho
 
 Setting up test environment...
 Compiling...
