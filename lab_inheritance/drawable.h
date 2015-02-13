@@ -16,7 +16,7 @@
 class Drawable
 {
 	public:
-		~Drawable() { /* Nothing */ }
+		virtual ~Drawable() { /* Nothing */ }
 
 		/**
 		 * @brief This method will draw the object onto the canvas.

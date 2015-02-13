@@ -137,3 +137,4 @@ void Truck::clear()
 	delete engine;
 }
 
+void Truck::draw(PNG* canvas) const {}

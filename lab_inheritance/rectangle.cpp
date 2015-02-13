@@ -80,3 +80,4 @@ void Rectangle::set_height(int pheight)
 	this->height_ = pheight;
 }
 
+
