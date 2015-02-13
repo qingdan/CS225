@@ -18,9 +18,11 @@ class Flower : public Drawable
 		Shape leaf;
 
 		void drawPedals(PNG* canvas, const Vector2& center, int x, int y) const;
+		void clear();
 	public:
 		Flower(const Vector2& center);
 		void draw(PNG* canvas) const;
+		~Flower();
 };
 
 #endif  // FLOWER_H_
