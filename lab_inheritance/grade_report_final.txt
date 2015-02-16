@@ -1,0 +1,27 @@
+Grading revision r12457 by kwang40, dated 2015-02-13 20:37:14.000468166 -0600 CST
+Monad Autograder
+Testing lab_inheritance at 2015-02-16 00:43:21
+
+"@return A voidean value indicating whether the test was successful." ~ lab_avl
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_virtual_perim  . . . . . . [10 pts] - passed
+test_virtual_area . . . . . . . [10 pts] - passed
+test_destructor (asan)  . . . . [20 pts] - passed
+test_constructor  . . . . . . . [10 pts] - passed
+test_drawable_destructor (asan) [10 pts] - passed
+test_truck_draw . . . . . . . . [10 pts] - passed
+test_slicing  . . . . . . . . . [20 pts] - passed
+test_flower_destructor (asan) . [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
