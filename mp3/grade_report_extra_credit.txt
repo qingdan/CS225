@@ -1,0 +1,51 @@
+Grading revision r15197 by kwang40, dated 2015-02-20 18:42:49.000438002 -0600 CST
+Monad Autograder
+Testing mp3.1 at 2015-02-21 00:26:58
+
+"All that is gold does not glitter, / Not all those who wander are lost;" ~ Bilbo Baggins
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testInsertFront  . . . . . . . . [2 pts] - passed
+testInsertBack . . . . . . . . . [2 pts] - passed
+testDestructor10 (asan)  . . . . [5 pts] - passed
+testDestructor37 (asan)  . . . . [5 pts] - passed
+testReverse20_size . . . . . . . [1 pts] - passed
+testReverse20_forward  . . . . . [3 pts] - passed
+testReverse20_backward . . . . . [4 pts] - FAILED
+testReverse37_size . . . . . . . [1 pts] - passed
+testReverse37_forward  . . . . . [2 pts] - passed
+testReverse37_backward . . . . . [2 pts] - FAILED
+testReverseEmpty (asan)  . . . . [5 pts] - FAILED
+testReverse20_memory (asan)  . . [3 pts] - FAILED
+testReverseNth20_2_size  . . . . [1 pts] - passed
+testReverseNth20_2_forward . . . [3 pts] - passed
+testReverseNth20_2_backward  . . [4 pts] - FAILED
+testReverseNth37_4_size  . . . . [1 pts] - passed
+testReverseNth37_4_forward . . . [5 pts] - passed
+testReverseNth37_4_backward  . . [6 pts] - FAILED
+testReverseNth37_37  . . . . . . [3 pts] - FAILED
+testReverseNth37_4_memory (asan) [3 pts] - FAILED
+testReverseNthEmpty (asan) . . . [5 pts] - FAILED
+testWaterfall4_size  . . . . . . [1 pts] - passed
+testWaterfall4_forward . . . . . [3 pts] - passed
+testWaterfall4_backward  . . . . [4 pts] - passed
+testWaterfall7_size  . . . . . . [1 pts] - passed
+testWaterfall7_forward . . . . . [3 pts] - passed
+testWaterfall7_backward  . . . . [4 pts] - passed
+testWaterfall12_size . . . . . . [1 pts] - passed
+testWaterfall12_forward  . . . . [3 pts] - passed
+testWaterfall12_backward . . . . [4 pts] - passed
+testWaterfall7_memory (asan) . . [5 pts] - passed
+testWaterfall7_empty (asan)  . . [5 pts] - FAILED
+
+
+Total score...
+================================================================
+TOTAL SCORE: 60
+
