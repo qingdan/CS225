@@ -103,7 +103,8 @@ void List<T>::insertBack( const T & ndata )
  */
 template <class T>
 void List<T>::reverse()
-{
+{   if (head == NULL||tail == NULL||head == tail)
+	return;
     reverse(head, tail);
 }
 
@@ -140,7 +141,6 @@ void List<T>::reverse( ListNode * & startPoint, ListNode * & endPoint )
 	startPoint->prev = origin_start_prev;
 	startPoint->next = temp;
 	endPoint = origin_start;
-	endPoint->prev = endPoint->next;
 	endPoint->next = origin_end_next;
 	if(origin_start_prev == NULL)
 	//it starts from the head
@@ -165,6 +165,8 @@ template <class T>
 void List<T>::reverseNth( int n )
 {
     /// @todo Graded in MP3.1
+	if (head == NULL)
+	return;
 	ListNode * startPoint = head;
 	ListNode * endPoint = head;
 	while(endPoint->next != NULL&&startPoint->next != NULL)
@@ -195,6 +197,8 @@ template <class T>
 void List<T>::waterfall()
 {
     /// @todo Graded in MP3.1
+	if(head == NULL||head->next == NULL)
+	return;
 	ListNode* track = head;
 	ListNode* hold = track->next;
 	while(track->next->next != NULL&& track->next != NULL )
