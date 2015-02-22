@@ -1,0 +1,77 @@
+Grading revision r15993 by tolar2, dated 2015-02-21 00:42:08.000135025 -0600 CST
+Monad Autograder
+Testing mp3 at 2015-02-22 00:27:02
+
+"All that is gold does not glitter, / Not all those who wander are lost;" ~ Bilbo Baggins
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testInsertFront  . . . . . . . . [2 pts]  - passed
+testInsertBack . . . . . . . . . [2 pts]  - passed
+testDestructor10 (asan)  . . . . [3 pts]  - passed
+testDestructor37 (asan)  . . . . [3 pts]  - passed
+testReverse20_size . . . . . . . [1 pts]  - passed
+testReverse20_forward  . . . . . [1 pts]  - passed
+testReverse20_backward . . . . . [1 pts]  - FAILED
+testReverse37_size . . . . . . . [1 pts]  - passed
+testReverse37_forward  . . . . . [1 pts]  - passed
+testReverse37_backward . . . . . [1 pts]  - FAILED
+testReverseEmpty (asan)  . . . . [1 pts]  - FAILED
+testReverse20_memory (asan)  . . [1 pts]  - FAILED
+testReverseNth20_2_size  . . . . [1 pts]  - passed
+testReverseNth20_2_forward . . . [1 pts]  - passed
+testReverseNth20_2_backward  . . [1 pts]  - FAILED
+testReverseNth37_4_size  . . . . [1 pts]  - passed
+testReverseNth37_4_forward . . . [1 pts]  - passed
+testReverseNth37_4_backward  . . [1 pts]  - FAILED
+testReverseNth37_37  . . . . . . [1 pts]  - FAILED
+testReverseNth37_4_memory (asan) [1 pts]  - FAILED
+testReverseNthEmpty (asan) . . . [1 pts]  - FAILED
+testWaterfall4_size  . . . . . . [1 pts]  - passed
+testWaterfall4_forward . . . . . [1 pts]  - passed
+testWaterfall4_backward  . . . . [2 pts]  - passed
+testWaterfall7_size  . . . . . . [1 pts]  - passed
+testWaterfall7_forward . . . . . [1 pts]  - passed
+testWaterfall7_backward  . . . . [2 pts]  - passed
+testWaterfall12_size . . . . . . [1 pts]  - passed
+testWaterfall12_forward  . . . . [1 pts]  - passed
+testWaterfall12_backward . . . . [2 pts]  - passed
+testWaterfall7_memory (asan) . . [3 pts]  - passed
+testWaterfall7_empty (asan)  . . [3 pts]  - FAILED
+testSplit5_this_size . . . . . . [1 pts]  - FAILED
+testSplit5_this_forward  . . . . [1 pts]  - FAILED
+testSplit5_this_backward . . . . [1 pts]  - FAILED
+testSplit5_split_size  . . . . . [1 pts]  - FAILED
+testSplit5_split_forward . . . . [1 pts]  - FAILED
+testSplit5_split_backward  . . . [1 pts]  - FAILED
+testSplit5_mem (asan)  . . . . . [3 pts]  - FAILED
+testMerge_size . . . . . . . . . [1 pts]  - passed
+testMerge_forward  . . . . . . . [1 pts]  - FAILED
+testMerge_backward . . . . . . . [1 pts]  - FAILED
+testMerge_mem (asan) . . . . . . [3 pts]  - FAILED
+testSort16p_s  . . . . . . . . . [1 pts]  - FAILED
+testSort16p_f  . . . . . . . . . [2 pts]  - FAILED
+testSort16p_b  . . . . . . . . . [2 pts]  - FAILED
+testSort20p_s  . . . . . . . . . [1 pts]  - FAILED
+testSort20p_f  . . . . . . . . . [2 pts]  - FAILED
+testSort20p_b  . . . . . . . . . [2 pts]  - FAILED
+testSort27p_s  . . . . . . . . . [1 pts]  - FAILED
+testSort27p_f  . . . . . . . . . [2 pts]  - FAILED
+testSort27p_b  . . . . . . . . . [2 pts]  - FAILED
+testSortEmpty  . . . . . . . . . [5 pts]  - FAILED
+testSort259p_s . . . . . . . . . [1 pts]  - FAILED
+testSort259p_f . . . . . . . . . [2 pts]  - FAILED
+testSort259p_b . . . . . . . . . [2 pts]  - FAILED
+testSortMemLeak (asan) . . . . . [5 pts]  - FAILED
+testSortNlogN  . . . . . . . . . [10 pts] - FAILED
+
+
+Total score...
+================================================================
+TOTAL SCORE: 34
+
