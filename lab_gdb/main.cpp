@@ -94,6 +94,8 @@ void testReverse()
 	out.writeToFile("reverse.png");
 
 	checkSoln(__func__, out, "soln_reverse.png");
+	
+	
 }
 
 void testShuffle()
