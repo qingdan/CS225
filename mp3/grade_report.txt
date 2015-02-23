@@ -1,8 +1,8 @@
-Grading revision r15993 by tolar2, dated 2015-02-21 00:42:08.000135025 -0600 CST
+Grading revision r16521 by kwang40, dated 2015-02-22 17:12:51.000610257 -0600 CST
 Monad Autograder
-Testing mp3 at 2015-02-22 00:27:02
+Testing mp3 at 2015-02-23 00:50:30
 
-"All that is gold does not glitter, / Not all those who wander are lost;" ~ Bilbo Baggins
+"Who dares to teach must never cease to learn." ~ J.C. Dana
 
 Setting up test environment...
 Compiling...
@@ -17,21 +17,21 @@ testDestructor10 (asan)  . . . . [3 pts]  - passed
 testDestructor37 (asan)  . . . . [3 pts]  - passed
 testReverse20_size . . . . . . . [1 pts]  - passed
 testReverse20_forward  . . . . . [1 pts]  - passed
-testReverse20_backward . . . . . [1 pts]  - FAILED
+testReverse20_backward . . . . . [1 pts]  - passed
 testReverse37_size . . . . . . . [1 pts]  - passed
 testReverse37_forward  . . . . . [1 pts]  - passed
-testReverse37_backward . . . . . [1 pts]  - FAILED
-testReverseEmpty (asan)  . . . . [1 pts]  - FAILED
-testReverse20_memory (asan)  . . [1 pts]  - FAILED
+testReverse37_backward . . . . . [1 pts]  - passed
+testReverseEmpty (asan)  . . . . [1 pts]  - passed
+testReverse20_memory (asan)  . . [1 pts]  - passed
 testReverseNth20_2_size  . . . . [1 pts]  - passed
 testReverseNth20_2_forward . . . [1 pts]  - passed
-testReverseNth20_2_backward  . . [1 pts]  - FAILED
+testReverseNth20_2_backward  . . [1 pts]  - passed
 testReverseNth37_4_size  . . . . [1 pts]  - passed
 testReverseNth37_4_forward . . . [1 pts]  - passed
-testReverseNth37_4_backward  . . [1 pts]  - FAILED
-testReverseNth37_37  . . . . . . [1 pts]  - FAILED
-testReverseNth37_4_memory (asan) [1 pts]  - FAILED
-testReverseNthEmpty (asan) . . . [1 pts]  - FAILED
+testReverseNth37_4_backward  . . [1 pts]  - passed
+testReverseNth37_37  . . . . . . [1 pts]  - passed
+testReverseNth37_4_memory (asan) [1 pts]  - passed
+testReverseNthEmpty (asan) . . . [1 pts]  - passed
 testWaterfall4_size  . . . . . . [1 pts]  - passed
 testWaterfall4_forward . . . . . [1 pts]  - passed
 testWaterfall4_backward  . . . . [2 pts]  - passed
@@ -42,7 +42,7 @@ testWaterfall12_size . . . . . . [1 pts]  - passed
 testWaterfall12_forward  . . . . [1 pts]  - passed
 testWaterfall12_backward . . . . [2 pts]  - passed
 testWaterfall7_memory (asan) . . [3 pts]  - passed
-testWaterfall7_empty (asan)  . . [3 pts]  - FAILED
+testWaterfall7_empty (asan)  . . [3 pts]  - passed
 testSplit5_this_size . . . . . . [1 pts]  - FAILED
 testSplit5_this_forward  . . . . [1 pts]  - FAILED
 testSplit5_this_backward . . . . [1 pts]  - FAILED
@@ -73,5 +73,5 @@ testSortNlogN  . . . . . . . . . [10 pts] - FAILED
 
 Total score...
 ================================================================
-TOTAL SCORE: 34
+TOTAL SCORE: 46
 
