@@ -1,8 +1,8 @@
-Grading revision r16521 by kwang40, dated 2015-02-22 17:12:51.000610257 -0600 CST
+Grading revision r16954 by tolar2, dated 2015-02-23 01:05:05.000201291 -0600 CST
 Monad Autograder
-Testing mp3 at 2015-02-23 00:50:30
+Testing mp3 at 2015-02-24 00:24:48
 
-"Who dares to teach must never cease to learn." ~ J.C. Dana
+"int getRandomNumber() { return 4; } // chosen by fair dice roll. guaranteed to be random." ~ XKCD #221
 
 Setting up test environment...
 Compiling...
