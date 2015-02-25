@@ -1,8 +1,8 @@
-Grading revision r16954 by tolar2, dated 2015-02-23 01:05:05.000201291 -0600 CST
+Grading revision r17123 by tolar2, dated 2015-02-24 00:39:03.000139899 -0600 CST
 Monad Autograder
-Testing mp3 at 2015-02-24 00:24:48
+Testing mp3 at 2015-02-25 00:28:41
 
-"int getRandomNumber() { return 4; } // chosen by fair dice roll. guaranteed to be random." ~ XKCD #221
+"The primary purpose of the DATA statement is to give names to constants; instead of referring to pi as 3.141592653589793 at every appearance, the variable PI can be given that value with a DATA statement and used instead of the longer form of the constant. This also simplifies modifying the program, should the value of pi change." ~ FORTRAN manual for Xerox computers
 
 Setting up test environment...
 Compiling...
