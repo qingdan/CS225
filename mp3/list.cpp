@@ -1,3 +1,4 @@
+#include <iostream>
 /**
  * @file list.cpp
  * Doubly Linked List (MP 3).
@@ -279,6 +280,8 @@ template <class T>
 typename List<T>::ListNode * List<T>::split(ListNode * start, int splitPoint)
 {
     /// @todo Graded in MP3.2
+	if(start == NULL||splitPoint == 0)
+	return start;
     	ListNode* newHead = head;
 	for(int i = 0; i < splitPoint; i++)
 	newHead = newHead->next;
@@ -328,6 +331,10 @@ template <class T>
 typename List<T>::ListNode * List<T>::merge(ListNode * first, ListNode * second)
 {
     /// @todo Graded in MP3.2
+	if(first == NULL||second == NULL)
+	return NULL;
+	if(first == second)
+	return first;
 	ListNode * trackOfFirst = first;
 	ListNode * trackOfSecond = second;
 	ListNode * newHead = first;
@@ -340,7 +347,7 @@ typename List<T>::ListNode * List<T>::merge(ListNode * first, ListNode * second)
 	newHead = second;
 	trackOfSecond = second->next;
 	}
-	ListNode * trackOfResult = head;
+	ListNode * trackOfResult = newHead;
 	while(trackOfFirst != NULL&&trackOfSecond != NULL)
 	{
 	if(trackOfFirst->data < trackOfSecond->data||trackOfSecond == NULL)
@@ -399,5 +406,18 @@ template <class T>
 typename List<T>::ListNode * List<T>::mergesort(ListNode * start, int chainLength)
 {
     /// @todo Graded in MP3.2
-    return NULL; // change me!
+	ListNode * headForMergesort = start;
+   	if (chainLength == 1)
+	{start->next = start->prev = NULL;
+	return start;}
+	else
+	{
+	ListNode * secondStart = start;
+	for(int i = 0; i < chainLength/2; i++)
+		secondStart = secondStart->next;
+	start = mergesort(start, chainLength/2);
+	secondStart = mergesort(secondStart, chainLength-chainLength/2);
+	headForMergesort = merge(start, secondStart);
+	}
+	return headForMergesort;
 }
