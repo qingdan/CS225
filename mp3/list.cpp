@@ -279,7 +279,12 @@ template <class T>
 typename List<T>::ListNode * List<T>::split(ListNode * start, int splitPoint)
 {
     /// @todo Graded in MP3.2
-    return NULL; // change me!
+    	ListNode* newHead = head;
+	for(int i = 0; i < splitPoint; i++)
+	newHead = newHead->next;
+	newHead->prev->next = NULL;
+	newHead->prev = NULL;
+	return newHead;
 }
 
 /**
@@ -323,7 +328,48 @@ template <class T>
 typename List<T>::ListNode * List<T>::merge(ListNode * first, ListNode * second)
 {
     /// @todo Graded in MP3.2
-    return NULL; // change me!
+	ListNode * trackOfFirst = first;
+	ListNode * trackOfSecond = second;
+	ListNode * newHead = first;
+	if(first->data < second->data)
+	{
+	trackOfFirst = first->next;
+	}	
+	else
+	{
+	newHead = second;
+	trackOfSecond = second->next;
+	}
+	ListNode * trackOfResult = head;
+	while(trackOfFirst != NULL&&trackOfSecond != NULL)
+	{
+	if(trackOfFirst->data < trackOfSecond->data||trackOfSecond == NULL)
+	{
+	trackOfResult->next = trackOfFirst;
+	trackOfFirst->prev = trackOfResult;
+	trackOfResult = trackOfFirst;
+	trackOfFirst = trackOfFirst->next;
+	}
+	else
+	{
+	trackOfResult->next = trackOfSecond;
+	trackOfSecond->prev = trackOfResult;
+	trackOfResult = trackOfSecond;
+	trackOfSecond = trackOfSecond->next;
+	}
+	}
+	if(trackOfFirst == NULL)
+	{
+	trackOfResult->next = trackOfSecond;
+	trackOfSecond->prev = trackOfResult; 
+	}
+	else
+	{
+	trackOfResult->next = trackOfFirst;
+	trackOfFirst->prev = trackOfResult; 
+	}
+	second = NULL;
+	return newHead;
 }
 
 /**
