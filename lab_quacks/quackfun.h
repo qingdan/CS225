@@ -22,7 +22,7 @@ namespace QuackFun
     
     template <typename T>
     void scramble(queue<T> & q);
-
+	
     template <typename T>
     bool verifySame(stack<T> & s, queue<T> & q);
 };

@@ -53,27 +53,45 @@ template <typename T>
 void QuackFun::scramble(queue<T> & q)
 {
 	stack<T> s;
-	s.push(q.front());
-	q.push();
-	int trackOfLeft = q.size()-1;	
-	int trackOfNumber = 1;
-	int BlockNumber = 1;
-   	while(trackOfNumber < q.size()-1) 
+	int blockNumber = 1;
+	int trackOfComplete = 0;
+	int size = int(q.size());
+	while(trackOfComplete < size)
 	{
-	if(BlockNumber%2 == 0)
+	if(blockNumber%2==1)//odd block, just move 
 	{
-	justmove(q,s, min(BlockNumber%4, trackOfNumber));
-	trackOfNumber += min(BlockNumber%4, trackOfNumber);
-	blockNumber ++;
+	int tempMin = blockNumber;
+	if(tempMin > size-trackOfComplete)
+	tempMin = size-trackOfComplete;
+	for(int i = 0; i < tempMin; i++)
+		{
+		q.push(q.front());
+		q.pop();
+		}
+	trackOfComplete += tempMin;
+	blockNumber++;
 	}
-	else
+	else//even block, reverse
 	{
-	reverse(q,s, min(BlockNumber%4, trackOfNumber));
-	trackOfNumber += min(BlockNumber%4, trackOfNumber);
-	blockNumber ++;
+	int tempMin = blockNumber;
+	if(tempMin > size-trackOfComplete)
+	tempMin = size-trackOfComplete;
+	for(int i = 0; i < tempMin; i++)
+		{
+		s.push(q.front());
+		q.pop();
+		}
+	for(int i = 0; i < tempMin; i++)
+		{
+		q.push(s.top());
+		s.pop();
+		}
+	trackOfComplete += tempMin;
+	blockNumber++;
 	}
 	}
 }
+
 
 /**
  * @return true if the parameter stack and queue contain only elements of exactly
@@ -96,4 +114,4 @@ bool QuackFun::verifySame(stack<T> & s, queue<T> & q)
     
     return retval;
 }
-o
+
