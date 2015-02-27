@@ -108,10 +108,16 @@ void QuackFun::scramble(queue<T> & q)
 template <typename T>
 bool QuackFun::verifySame(stack<T> & s, queue<T> & q)
 {
-    bool retval = true; // optional
-    //T temp1; // rename me
-    //T temp2; // rename :)
-    
-    return retval;
+	bool retval = true; // optional
+	if(s.empty())//this means the stack has go to the base case
+	return true;
+	T temp = s.top();//the content of stack will store in each temp in each recursion
+	s.pop();
+	retval = verifySame(s, q);//when the base case happen, s will remain empty, q will remain identical
+	retval = (retval && (temp == q.front()));
+	q.push(q.front());
+	q.pop();//the first element in q will be the last
+     	s.push(temp);//retrieve the previous s
+	return retval;
 }
 
