@@ -23,10 +23,19 @@
 template <typename T>
 T QuackFun::sum(stack<T> & s)
 {
-    // Your code here
-    return T(); // stub return value (0 for primitive types). Change this!
-                // Note: T() is the default value for objects, and 0 for
-                // primitive types
+	T temp = s.top();
+	s.pop();
+	if(s.empty())
+	{
+	s.push(temp);
+	return temp;
+	}
+	else
+	{
+	T sumBefore = sum(s);
+	s.push(temp);
+	return temp+sumBefore;
+	}
 }
 
 /**
@@ -43,10 +52,27 @@ T QuackFun::sum(stack<T> & s)
 template <typename T>
 void QuackFun::scramble(queue<T> & q)
 {
-    stack<T> s;
-    // optional: queue<T> q2;
-
-    // Your code here
+	stack<T> s;
+	s.push(q.front());
+	q.push();
+	int trackOfLeft = q.size()-1;	
+	int trackOfNumber = 1;
+	int BlockNumber = 1;
+   	while(trackOfNumber < q.size()-1) 
+	{
+	if(BlockNumber%2 == 0)
+	{
+	justmove(q,s, min(BlockNumber%4, trackOfNumber));
+	trackOfNumber += min(BlockNumber%4, trackOfNumber);
+	blockNumber ++;
+	}
+	else
+	{
+	reverse(q,s, min(BlockNumber%4, trackOfNumber));
+	trackOfNumber += min(BlockNumber%4, trackOfNumber);
+	blockNumber ++;
+	}
+	}
 }
 
 /**
@@ -70,4 +96,4 @@ bool QuackFun::verifySame(stack<T> & s, queue<T> & q)
     
     return retval;
 }
-
+o
