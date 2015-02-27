@@ -415,6 +415,8 @@ typename List<T>::ListNode * List<T>::mergesort(ListNode * start, int chainLengt
 	ListNode * secondStart = start;
 	for(int i = 0; i < chainLength/2; i++)
 		secondStart = secondStart->next;
+	secondStart->prev->next = NULL;
+	secondStart->prev = NULL;	
 	start = mergesort(start, chainLength/2);
 	secondStart = mergesort(secondStart, chainLength-chainLength/2);
 	headForMergesort = merge(start, secondStart);

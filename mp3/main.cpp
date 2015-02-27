@@ -249,10 +249,10 @@ void testSort()
 	random_shuffle(v.begin(), v.end());
 
 	// generate shuffled image (done for you already)
-	/*
+	
 	   PNG b2 = b.genImg(v, d);
 	   b2.writeToFile("in_01_shuffled_60.png");
-	*/
+	
 
 	// make list and sort it
 	List<int> img_srt(v.begin(), v.end());
@@ -270,10 +270,10 @@ void testSort()
 	v = buildVector(b, d);
 	random_shuffle(v.begin(), v.end());
 
-	/*
+	
 	   PNG q = b.genImg(v, d);
 	   q.writeToFile("in_01_shuffled_1.png");
-    */
+    
 
 	List<int> q_srt(v.begin(), v.end());
 	q_srt.sort();
@@ -284,6 +284,12 @@ void testSort()
 	b3.writeToFile("unshuffled_1.png");
 
 	checkSoln("testSort", b3, "in_01.png");
+	/*List<int> list;
+	list.insertBack(3);
+	list.insertBack(2);
+	list.insertBack(1);
+	list.sort();
+	std::cout << list << endl;*/
 }
 
 void testMP31()
@@ -334,4 +340,5 @@ int main(int argc, char ** argv)
 
 	return 0;
 }
+
 

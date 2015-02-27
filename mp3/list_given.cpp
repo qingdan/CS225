@@ -121,3 +121,4 @@ List<T>::List(const Iter & begin_iterator, const Iter & end_iterator)
 	for (Iter i = begin_iterator; i != end_iterator; ++i)
 		insertBack(*i);
 }
+
