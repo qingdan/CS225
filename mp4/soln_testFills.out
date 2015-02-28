@@ -1,0 +1,128 @@
+Testing solidColorPicker:
+	operator()(1, 1) = {255, 100, 100}
+	operator()(1, 2) = {255, 100, 100}
+	operator()(1, 4) = {255, 100, 100}
+	operator()(1, 8) = {255, 100, 100}
+	operator()(1, 16) = {255, 100, 100}
+	operator()(1, 32) = {255, 100, 100}
+	operator()(2, 1) = {255, 100, 100}
+	operator()(2, 2) = {255, 100, 100}
+	operator()(2, 4) = {255, 100, 100}
+	operator()(2, 8) = {255, 100, 100}
+	operator()(2, 16) = {255, 100, 100}
+	operator()(2, 32) = {255, 100, 100}
+	operator()(4, 1) = {255, 100, 100}
+	operator()(4, 2) = {255, 100, 100}
+	operator()(4, 4) = {255, 100, 100}
+	operator()(4, 8) = {255, 100, 100}
+	operator()(4, 16) = {255, 100, 100}
+	operator()(4, 32) = {255, 100, 100}
+	operator()(8, 1) = {255, 100, 100}
+	operator()(8, 2) = {255, 100, 100}
+	operator()(8, 4) = {255, 100, 100}
+	operator()(8, 8) = {255, 100, 100}
+	operator()(8, 16) = {255, 100, 100}
+	operator()(8, 32) = {255, 100, 100}
+	operator()(16, 1) = {255, 100, 100}
+	operator()(16, 2) = {255, 100, 100}
+	operator()(16, 4) = {255, 100, 100}
+	operator()(16, 8) = {255, 100, 100}
+	operator()(16, 16) = {255, 100, 100}
+	operator()(16, 32) = {255, 100, 100}
+	operator()(32, 1) = {255, 100, 100}
+	operator()(32, 2) = {255, 100, 100}
+	operator()(32, 4) = {255, 100, 100}
+	operator()(32, 8) = {255, 100, 100}
+	operator()(32, 16) = {255, 100, 100}
+	operator()(32, 32) = {255, 100, 100}
+	Wrote images/solidColorPickerTest.png
+Testing GradientColorPicker:
+	operator()(1, 1) = {10, 10, 255}
+	operator()(1, 2) = {10, 10, 255}
+	operator()(1, 4) = {10, 10, 255}
+	operator()(1, 8) = {10, 10, 255}
+	operator()(1, 16) = {10, 10, 255}
+	operator()(1, 32) = {10, 10, 255}
+	operator()(2, 1) = {10, 10, 255}
+	operator()(2, 2) = {10, 10, 255}
+	operator()(2, 4) = {10, 10, 255}
+	operator()(2, 8) = {10, 10, 255}
+	operator()(2, 16) = {10, 10, 255}
+	operator()(2, 32) = {10, 10, 255}
+	operator()(4, 1) = {10, 10, 255}
+	operator()(4, 2) = {10, 10, 255}
+	operator()(4, 4) = {10, 10, 255}
+	operator()(4, 8) = {10, 10, 255}
+	operator()(4, 16) = {10, 10, 255}
+	operator()(4, 32) = {10, 10, 255}
+	operator()(8, 1) = {10, 10, 255}
+	operator()(8, 2) = {10, 10, 255}
+	operator()(8, 4) = {10, 10, 255}
+	operator()(8, 8) = {17, 12, 250}
+	operator()(8, 16) = {10, 10, 255}
+	operator()(8, 32) = {10, 10, 255}
+	operator()(16, 1) = {24, 15, 246}
+	operator()(16, 2) = {31, 18, 242}
+	operator()(16, 4) = {45, 23, 233}
+	operator()(16, 8) = {73, 33, 215}
+	operator()(16, 16) = {45, 23, 233}
+	operator()(16, 32) = {10, 10, 255}
+	operator()(32, 1) = {136, 56, 175}
+	operator()(32, 2) = {143, 59, 171}
+	operator()(32, 4) = {157, 64, 162}
+	operator()(32, 8) = {185, 74, 144}
+	operator()(32, 16) = {157, 64, 162}
+	operator()(32, 32) = {45, 23, 233}
+	Wrote images/gradientColorPickerTest.png
+Testing GridColorPicker:
+	operator()(1, 1) = {255, 255, 255}
+	operator()(1, 2) = {255, 255, 255}
+	operator()(1, 4) = {255, 255, 255}
+	operator()(1, 8) = {110, 255, 110}
+	operator()(1, 16) = {110, 255, 110}
+	operator()(1, 32) = {110, 255, 110}
+	operator()(2, 1) = {255, 255, 255}
+	operator()(2, 2) = {255, 255, 255}
+	operator()(2, 4) = {255, 255, 255}
+	operator()(2, 8) = {110, 255, 110}
+	operator()(2, 16) = {110, 255, 110}
+	operator()(2, 32) = {110, 255, 110}
+	operator()(4, 1) = {255, 255, 255}
+	operator()(4, 2) = {255, 255, 255}
+	operator()(4, 4) = {255, 255, 255}
+	operator()(4, 8) = {110, 255, 110}
+	operator()(4, 16) = {110, 255, 110}
+	operator()(4, 32) = {110, 255, 110}
+	operator()(8, 1) = {110, 255, 110}
+	operator()(8, 2) = {110, 255, 110}
+	operator()(8, 4) = {110, 255, 110}
+	operator()(8, 8) = {110, 255, 110}
+	operator()(8, 16) = {110, 255, 110}
+	operator()(8, 32) = {110, 255, 110}
+	operator()(16, 1) = {110, 255, 110}
+	operator()(16, 2) = {110, 255, 110}
+	operator()(16, 4) = {110, 255, 110}
+	operator()(16, 8) = {110, 255, 110}
+	operator()(16, 16) = {110, 255, 110}
+	operator()(16, 32) = {110, 255, 110}
+	operator()(32, 1) = {110, 255, 110}
+	operator()(32, 2) = {110, 255, 110}
+	operator()(32, 4) = {110, 255, 110}
+	operator()(32, 8) = {110, 255, 110}
+	operator()(32, 16) = {110, 255, 110}
+	operator()(32, 32) = {110, 255, 110}
+	Wrote images/gridColorPickerTest.png
+Testing solid fills
+	Wrote images/dfsSolidTest.gif
+	Wrote images/bfsSolidTest.gif
+Testing grid fills
+	Wrote images/dfsGridTest.gif
+	Wrote images/bfsGridTest.gif
+Testing gradient fills
+	Wrote images/dfsGradientTest.gif
+	Wrote images/bfsGradientTest.gif
+Testing PacMan
+	Wrote images/pacManBFS.png
+	Wrote images/pacManDFS.png
+	Wrote images/antiPacManBFS.gif
+	Wrote images/antiPacManDFS.gif
