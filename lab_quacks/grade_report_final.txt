@@ -1,0 +1,33 @@
+Grading revision r19058 by kwang40, dated 2015-02-27 15:36:57.000549546 -0600 CST
+Monad Autograder
+Testing lab_quacks at 2015-03-02 00:32:38
+
+"What is written without effort is, in general, read without pleasure." ~ Samuel Johnson
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+sumDigits_762  . . . [3 pts]  - passed
+sumDigits_0  . . . . [2 pts]  - passed
+sumDigits_2  . . . . [2 pts]  - passed
+sumDigits_1024 . . . [3 pts]  - passed
+triangle_0 . . . . . [2 pts]  - passed
+triangle_1 . . . . . [2 pts]  - passed
+triangle_5 . . . . . [3 pts]  - passed
+triangle_10  . . . . [3 pts]  - passed
+sum_136  . . . . . . [20 pts] - passed
+sum_floats . . . . . [20 pts] - passed
+scramble_17  . . . . [20 pts] - passed
+scramble_10  . . . . [20 pts] - passed
+verifySame_result  . [10 pts] - passed
+verifySame_no_modify [15 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 125
+
