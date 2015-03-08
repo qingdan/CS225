@@ -164,13 +164,21 @@ class BinaryTree
          *  takes a pseudo-random path to a leaf where it is inserted. If true, the insert
          *  function will act like it does in a BST.
          */
+
+	void mirror(Node* &subRoot);
+
+	bool isOrdered(const Node* subRoot) const;
+	T maxOnLeft(const Node* subRoot) const;
+	T minOnRight(const Node* subRoot) const;
         void insert(Node* & node, const T & elem, bool sorted);
-        
+        void printPaths(vector <const BinaryTree<T>::Node *> &treeVec, const Node* subRoot) const;
+	void printVector(vector <const BinaryTree<T>::Node *> treeVec) const;
         /**
          * Helper function for operator= and cctor.
          * @param subRoot The current node in the recursion
          */
         Node* copy(const Node* subRoot);
+	int & sumDistances(int distanceHave, const Node* subRoot, int &sum) const;
 
         /**
          * Private helper function for clear that clears beneath the parameter node.
