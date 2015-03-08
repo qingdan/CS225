@@ -1,0 +1,69 @@
+Grading revision r22419 by tolar2, dated 2015-03-07 00:53:37.000795791 -0600 CST
+Monad Autograder
+Testing mp4 at 2015-03-08 00:45:29
+
+"Procrastination: working tomorrow for a better today." ~ Anonymous
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testStackPushPeek  . . . . . . . [1 pts] - passed
+testStackPushPop . . . . . . . . [1 pts] - passed
+testStackManyPushesPeek  . . . . [1 pts] - passed
+testStackManyPushesTwoPops . . . [1 pts] - passed
+testStackManyOperations  . . . . [1 pts] - passed
+testStackDuplicateElements . . . [1 pts] - passed
+testQueueEnqueuePeek . . . . . . [1 pts] - passed
+testQueueEnqueueDequeue  . . . . [1 pts] - passed
+testQueueManyEnqueuesPeek  . . . [1 pts] - passed
+testQueueManyEnqueuesTwoDequeues [1 pts] - passed
+testQueueManyOperations  . . . . [1 pts] - passed
+stack_peek_1 . . . . . . . . . . [1 pts] - passed
+stack_pop_peek_1 . . . . . . . . [1 pts] - passed
+stack_pop_2  . . . . . . . . . . [2 pts] - passed
+stack_isEmpty_1  . . . . . . . . [1 pts] - passed
+stack_isEmpty_2  . . . . . . . . [1 pts] - passed
+stack_push_pop_isEmpty . . . . . [2 pts] - passed
+stack_push_and_pop . . . . . . . [2 pts] - passed
+queue_peek_1 . . . . . . . . . . [1 pts] - passed
+queue_dequeue_peek_1 . . . . . . [2 pts] - passed
+queue_dequeue_2  . . . . . . . . [2 pts] - passed
+queue_isEmpty_1  . . . . . . . . [1 pts] - passed
+queue_isEmpty_2  . . . . . . . . [1 pts] - passed
+queue_enqueue_dequeue_isEmpty  . [2 pts] - passed
+queue_enqueue_and_dequeue  . . . [2 pts] - passed
+testThroughStackQueue  . . . . . [2 pts] - passed
+testEnqueueConstantTime  . . . . [2 pts] - passed
+testDequeueConstantTime  . . . . [2 pts] - passed
+testEnqueuePeekDequeueTime . . . [2 pts] - passed
+solid_picker_15  . . . . . . . . [4 pts] - FAILED
+gradient_picker_16 . . . . . . . [4 pts] - FAILED
+gradient_picker_17 . . . . . . . [4 pts] - FAILED
+DFS_solid  . . . . . . . . . . . [4 pts] - FAILED
+BFS_solid  . . . . . . . . . . . [4 pts] - FAILED
+DFS_grid . . . . . . . . . . . . [4 pts] - FAILED
+BFS_grid . . . . . . . . . . . . [4 pts] - FAILED
+DFS_gradient . . . . . . . . . . [4 pts] - FAILED
+BFS_gradient . . . . . . . . . . [4 pts] - FAILED
+DFS_18 . . . . . . . . . . . . . [2 pts] - FAILED
+DFS_19 . . . . . . . . . . . . . [2 pts] - FAILED
+DFS_20 . . . . . . . . . . . . . [2 pts] - FAILED
+DFS_21 . . . . . . . . . . . . . [2 pts] - FAILED
+DFS_22 . . . . . . . . . . . . . [2 pts] - FAILED
+DFS_23 . . . . . . . . . . . . . [2 pts] - FAILED
+BFS_24 . . . . . . . . . . . . . [2 pts] - FAILED
+BFS_25 . . . . . . . . . . . . . [2 pts] - FAILED
+BFS_26 . . . . . . . . . . . . . [2 pts] - FAILED
+BFS_27 . . . . . . . . . . . . . [2 pts] - FAILED
+BFS_28 . . . . . . . . . . . . . [2 pts] - FAILED
+BFS_29 . . . . . . . . . . . . . [2 pts] - FAILED
+
+
+Total score...
+================================================================
+TOTAL SCORE: 40
+
