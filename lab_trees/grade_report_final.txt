@@ -1,0 +1,23 @@
+Grading revision r22745 by kwang40, dated 2015-03-08 15:35:09.000065678 -0500 CDT
+Monad Autograder
+Testing lab_trees at 2015-03-09 00:30:37
+
+"int getRandomNumber() { return 4; } // chosen by fair dice roll. guaranteed to be random." ~ XKCD #221
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_isOrdered  . [33 pts] - passed
+test_mirror . . . [33 pts] - passed
+test_printPaths . [34 pts] - passed
+test_sumDistances [25 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 125
+
