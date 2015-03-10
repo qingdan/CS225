@@ -1,8 +1,8 @@
-Grading revision r22650 by tolar2, dated 2015-03-08 01:13:55.000378093 -0600 CST
+Grading revision r23342 by tolar2, dated 2015-03-09 01:44:45.000595008 -0500 CDT
 Monad Autograder
-Testing mp4 at 2015-03-09 01:16:37
+Testing mp4 at 2015-03-10 00:47:01
 
-"A lot of the things that I say are true, but I don't actually mean them." ~ Alexey Stepanov
+"Let me tell you the secret that has led me to my goal. My strength lies solely in my tenacity." ~ Louis Pasteur
 
 Setting up test environment...
 Compiling...
