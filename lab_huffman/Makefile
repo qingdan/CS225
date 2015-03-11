@@ -22,6 +22,9 @@ all: $(EXE_ENCODER) $(EXE_ENCODER)-asan \
 	$(EXE_DECODER) $(EXE_DECODER)-asan \
 	$(EXE_PRINTER) $(EXE_PRINTER)-asan
 
+data:
+	svn export https://subversion.ews.illinois.edu/svn/sp15-cs225/_shared/lab_huffman_data data
+
 # Pattern rules for object files
 $(OBJS_DIR)/%.o: %.cpp | $(OBJS_DIR)
 	$(CXX) $(CXXFLAGS) $< -o $@
