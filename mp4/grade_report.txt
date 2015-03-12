@@ -1,8 +1,8 @@
-Grading revision r23582 by tolar2, dated 2015-03-10 01:15:51.000796404 -0500 CDT
+Grading revision r23993 by tolar2, dated 2015-03-11 01:12:02.000408509 -0500 CDT
 Monad Autograder
-Testing mp4 at 2015-03-11 00:44:02
+Testing mp4 at 2015-03-12 00:45:04
 
-"The sooner you start to code, the longer the program will take." ~ R. Carlson
+"Anything that can go wrong will go wrong." ~ Murphy's Law
 
 Setting up test environment...
 Compiling...
