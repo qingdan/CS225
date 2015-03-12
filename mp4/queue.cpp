@@ -75,7 +75,7 @@ T Queue<T>::remove() {
  */
 template<class T>
 T Queue<T>::peek()
-{
+{  
     /**
      * @todo Your code here! You will need to replace the following line.
      */

@@ -153,7 +153,7 @@ animation filler::fill( PNG & img, int x, int y,
 	{
 		for(int j = 0; j < img.width(); j++)
 		{
-			checkArray = false;
+			**(checkArray+i) = false;
 		}
 	}
 	pixels.add(*img(x,y));
