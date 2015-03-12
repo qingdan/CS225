@@ -79,7 +79,39 @@ HuffmanTree::TreeNode * HuffmanTree::removeSmallest(
 	 */
 	TreeNode * smallest = NULL;
 	// your code!
-	return smallest;
+	if(singleQueue.empty())
+	{
+		if(mergeQueue.empty())
+			return NULL;
+		else
+		{
+			smallest = mergeQueue.front();
+			mergeQueue.pop();
+			return smallest;
+		}
+	}
+	else
+	{
+		if(mergeQueue.empty())
+		{
+			smallest = singleQueue.front();
+			singleQueue.pop();
+			return smallest;
+		}
+		else
+		{
+			smallest = singleQueue.front();
+			if(smallest > mergeQueue.front())
+			{
+				smallest = mergeQueue.front();
+				mergeQueue.pop();
+				return smallest;
+			}
+			singleQueue.pop();
+			return smallest;
+		}
+	}
+	
 }
 
 void HuffmanTree::buildTree( const vector<Frequency> & frequencies ) {
@@ -103,6 +135,26 @@ void HuffmanTree::buildTree( const vector<Frequency> & frequencies ) {
 	 * Finally, when there is a single node left, it is the root. Assign it
 	 * to the root and you're done!
 	 */
+	while(!frequencies.empty())
+	{
+		TreeNode* temp = new TreeNode(frequencies.back());
+		singleQueue.push(temp);
+		frequencies.pop_back();
+	}
+	while(singleQueue.size()+mergeQueue.size() != 1)
+	{
+		TreeNode* mostSmall = removeSmallest(singleQueue, mergeQueue);
+		TreeNode* secondSmall = removeSmallest(singleQueue, mergeQueue);
+		TreeNode* parent = new TreeNode(mostSmall->frequency+secondSmall->frequency);
+		parent->left = secondSmall;
+		parent->right = mostSmall;
+		mergeQueue.push(parent);
+	}
+	if(singleQueue.empty())
+		root = mergeQueue.front();
+	else
+		root = singleQueue.front();
+		
 }
 
 string HuffmanTree::decodeFile( BinaryFileReader & bfile ) {
