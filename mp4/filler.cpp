@@ -141,5 +141,68 @@ animation filler::fill( PNG & img, int x, int y,
      *        have been checked. So if frameFreq is set to 1, a pixel should
      *        be filled every frame.
      */
-    return animation();
+	OrderingStructure <RGBAPixel> pixels;
+	OrderingStructure <int> xCoordinates;
+	OrderingStructure <int> yCoordinates;
+	animation myAnimation;
+	int frameCount = 0;
+	int tempHeight = img.height();
+	int tempWidth = img.width();
+	bool checkArray[tempHeight][tempWidth];
+	for (int i = 0; i < img.height(); i++)
+	{
+		for(int j = 0; j < img.width(); j++)
+		{
+			checkArray = false;
+		}
+	}
+	pixels.add(*img(x,y));
+	xCoordinates.add(x);
+	yCoordinates.add(y);
+	while(!pixels.empty())
+	{
+		RGBAPixel currPiexel = pixels.remove();
+		int currX = xCoordinates.remove();
+		int currY = yCoordinates.remove();	
+		int colorDistane = pow(currPixel.red-*img(x,y).red,2) + pow(currPixel.green-*img(x,y).green,2) + pow(currPixel.blue - *img(x,y).blue,2);	
+		if(!checkArray[currY][currX]&& colorDistance <= tolerance)
+		{
+			checkArray[currY][currX] = true;
+			fillColor(currX,currY);
+			//right
+			if(currX + 1 < width)
+			{
+				pixels.add(*img(currX+1, currY));
+				xCoordinates.add(currX+1);
+				yCoordinates.add(currY);
+			}
+			//down
+			if(currY + 1 < height)
+			{
+				pixels.add(*img(currX, currY+1));
+				xCoordinates.add(currX);
+				yCoordinates.add(currY+1);
+			}
+			//left
+			if(currX - 1 >= 0)
+			{
+				pixels.add(*img(currX-1, currY));
+				xCoordinates.add(currX-1);
+				yCoordinates.add(currY);
+			}
+			//up
+			if(currY - 1 >= 0)
+			{
+				pixels.add(*img(currY-1, currY));
+				xCoordinates.add(currX);
+				yCoordinates.add(currY-1);
+			}			
+			if(++frameCounet % frameFreq == 0) 
+				myAnimation.addFrane(img);
+
+		}	
+	
+	
+	}	
+    return myAnimation;
 }
