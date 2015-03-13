@@ -58,9 +58,9 @@ RGBAPixel gradientColorPicker::operator()(int x, int y)
 	int d = abs(centerX - x) + abs(centerY - y);
 	if(d > radius)
 	return fadeColor2;
-	color.red = fadeColor1.red - floor(d*fadeColor1.red/radius) + floor(d*fadeColor1.red/radius);
-	color.green = fadeColor1.green - floor(d*fadeColor1.green/radius) + floor(d*fadeColor1.green/radius);
-	color.blue = fadeColor1.blue - floor(d*fadeColor1.blue/radius) + floor(d*fadeColor1.blue/radius);
+	color.red = fadeColor1.red - floor(d*fadeColor1.red/radius) + floor(d*fadeColor2.red/radius);
+	color.green = fadeColor1.green - floor(d*fadeColor1.green/radius) + floor(d*fadeColor2.green/radius);
+	color.blue = fadeColor1.blue - floor(d*fadeColor1.blue/radius) + floor(d*fadeColor2.blue/radius);
 	return color;
 	
 }

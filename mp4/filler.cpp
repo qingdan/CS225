@@ -14,7 +14,8 @@ animation filler::dfs::fillSolid( PNG & img, int x, int y,
      * @todo Your code here! You should replace the following line with a
      *  correct call to fill with the correct colorPicker parameter.
      */
-    return animation();
+	solidColorPicker theColorPicker(fillColor); 
+    	return filler::fill <Stack> (img, x, y, theColorPicker, tolerance, frameFreq);
 }
 
 animation filler::dfs::fillGrid( PNG & img, int x, int y, 
@@ -23,7 +24,8 @@ animation filler::dfs::fillGrid( PNG & img, int x, int y,
      * @todo Your code here! You should replace the following line with a
      *  correct call to fill with the correct colorPicker parameter.
      */
-    return animation();
+	gridColorPicker theColorPicker(gridColor, gridSpacing); 
+    	return filler::fill  <Stack> (img, x, y, theColorPicker, tolerance, frameFreq);
 }
 
 animation filler::dfs::fillGradient( PNG & img, int x, int y, 
@@ -33,7 +35,9 @@ animation filler::dfs::fillGradient( PNG & img, int x, int y,
      * @todo Your code here! You should replace the following line with a
      *  correct call to fill with the correct colorPicker parameter.
      */
-    return animation();
+	gradientColorPicker theColorPicker(fadeColor1, fadeColor2, radius, x, y); 
+    	return filler::fill <Stack> (img, x, y, theColorPicker, tolerance, frameFreq);    
+
 }
 
 animation filler::dfs::fill( PNG & img, int x, int y, 
@@ -43,7 +47,8 @@ animation filler::dfs::fill( PNG & img, int x, int y,
      *  correct call to filler::fill with the correct template parameter
      *  indicating the ordering structure to be used in the fill.
      */
-    return animation();
+	 
+    	return filler::fill <Stack> (img, x, y, fillColor, tolerance, frameFreq);  
 }
 
 animation filler::bfs::fillSolid( PNG & img, int x, int y, 
@@ -52,7 +57,8 @@ animation filler::bfs::fillSolid( PNG & img, int x, int y,
      * @todo Your code here! You should replace the following line with a
      *  correct call to fill with the correct colorPicker parameter.
      */
-    return animation();
+	solidColorPicker theColorPicker(fillColor); 
+    	return filler::fill <Queue> (img, x, y, theColorPicker, tolerance, frameFreq ) ;
 }
 
 animation filler::bfs::fillGrid( PNG & img, int x, int y, 
@@ -61,7 +67,8 @@ animation filler::bfs::fillGrid( PNG & img, int x, int y,
      * @todo Your code here! You should replace the following line with a
      *  correct call to fill with the correct colorPicker parameter.
      */
-    return animation();
+	gridColorPicker theColorPicker(gridColor, gridSpacing); 
+    	return filler::fill <Queue> (img, x, y, theColorPicker, tolerance, frameFreq);
 }
 
 animation filler::bfs::fillGradient( PNG & img, int x, int y, 
@@ -71,7 +78,8 @@ animation filler::bfs::fillGradient( PNG & img, int x, int y,
      * @todo Your code here! You should replace the following line with a
      *  correct call to fill with the correct colorPicker parameter.
      */
-    return animation();
+	gradientColorPicker theColorPicker(fadeColor1, fadeColor2, radius, x, y); 
+    	return filler::fill <Queue> (img, x, y, theColorPicker, tolerance, frameFreq);  
 }
 
 animation filler::bfs::fill( PNG & img, int x, int y, 
@@ -81,7 +89,7 @@ animation filler::bfs::fill( PNG & img, int x, int y,
      *  correct call to filler::fill with the correct template parameter
      *  indicating the ordering structure to be used in the fill.
      */
-    return animation();
+    	return filler::fill <Queue> (img, x, y, fillColor, tolerance, frameFreq);  
 }
 
 template <template <class T> class OrderingStructure>
@@ -141,68 +149,71 @@ animation filler::fill( PNG & img, int x, int y,
      *        have been checked. So if frameFreq is set to 1, a pixel should
      *        be filled every frame.
      */
-	OrderingStructure <RGBAPixel> pixels;
 	OrderingStructure <int> xCoordinates;
 	OrderingStructure <int> yCoordinates;
 	animation myAnimation;
 	int frameCount = 0;
-	int tempHeight = img.height();
-	int tempWidth = img.width();
-	bool checkArray[tempHeight][tempWidth];
-	for (int i = 0; i < img.height(); i++)
+	std::vector <bool> checkArray(img.height()*img.width());
+	for (size_t i = 0; i < img.height(); i++)
 	{
-		for(int j = 0; j < img.width(); j++)
+		for(size_t j = 0; j < img.width(); j++)
 		{
-			**(checkArray+i) = false;
+			checkArray[i*img.width()+j] = false;
 		}
 	}
-	pixels.add(*img(x,y));
 	xCoordinates.add(x);
 	yCoordinates.add(y);
-	while(!pixels.empty())
+	int origin_r = img(x,y)->red;
+ 	int origin_g = img(x,y)->green;
+        int origin_b = img(x,y)->blue;
+
+	while(!xCoordinates.isEmpty())
 	{
-		RGBAPixel currPiexel = pixels.remove();
 		int currX = xCoordinates.remove();
-		int currY = yCoordinates.remove();	
-		int colorDistane = pow(currPixel.red-*img(x,y).red,2) + pow(currPixel.green-*img(x,y).green,2) + pow(currPixel.blue - *img(x,y).blue,2);	
-		if(!checkArray[currY][currX]&& colorDistance <= tolerance)
+		int currY = yCoordinates.remove();
+		RGBAPixel currPixel = *img(currX,currY);
+		int colorDistance = pow(currPixel.red-origin_r,2) + pow(currPixel.green-origin_g,2) + pow(currPixel.blue -origin_b,2);	
+		if((!checkArray[currY*img.width()+currX])&& colorDistance <= tolerance)
 		{
-			checkArray[currY][currX] = true;
-			fillColor(currX,currY);
+			checkArray[currY*img.width()+currX] = true;
+			RGBAPixel tempPixel = fillColor(currX,currY);
+			img(currX,currY)->red = tempPixel.red;
+			img(currX,currY)->green = tempPixel.green;
+			img(currX,currY)->blue = tempPixel.blue;
 			//right
-			if(currX + 1 < width)
+			if(currX + 1 < int(img.height()))
 			{
-				pixels.add(*img(currX+1, currY));
 				xCoordinates.add(currX+1);
 				yCoordinates.add(currY);
 			}
 			//down
-			if(currY + 1 < height)
+			if(currY + 1 < int(img.height()))
 			{
-				pixels.add(*img(currX, currY+1));
 				xCoordinates.add(currX);
 				yCoordinates.add(currY+1);
 			}
 			//left
 			if(currX - 1 >= 0)
 			{
-				pixels.add(*img(currX-1, currY));
 				xCoordinates.add(currX-1);
 				yCoordinates.add(currY);
 			}
 			//up
 			if(currY - 1 >= 0)
 			{
-				pixels.add(*img(currY-1, currY));
 				xCoordinates.add(currX);
 				yCoordinates.add(currY-1);
 			}			
-			if(++frameCounet % frameFreq == 0) 
-				myAnimation.addFrane(img);
+			if((++frameCount) % frameFreq == 0) 
+				myAnimation.addFrame(img);
 
 		}	
 	
-	
-	}	
-    return myAnimation;
+	}
+		
+    	return myAnimation;	
 }
+
+
+
+
