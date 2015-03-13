@@ -1,8 +1,8 @@
-Grading revision r23993 by tolar2, dated 2015-03-11 01:12:02.000408509 -0500 CDT
+Grading revision r25035 by kwang40, dated 2015-03-12 23:31:59.000896859 -0500 CDT
 Monad Autograder
-Testing mp4 at 2015-03-12 00:45:04
+Testing mp4 at 2015-03-13 00:44:31
 
-"Anything that can go wrong will go wrong." ~ Murphy's Law
+"Ridiculous!" ~ Kyle Johnson
 
 Setting up test environment...
 Compiling...
@@ -38,32 +38,32 @@ queue_enqueue_dequeue_isEmpty  . [2 pts] - passed
 queue_enqueue_and_dequeue  . . . [2 pts] - passed
 testThroughStackQueue  . . . . . [2 pts] - passed
 testEnqueueConstantTime  . . . . [2 pts] - passed
-testDequeueConstantTime  . . . . [2 pts] - passed
+testDequeueConstantTime  . . . . [2 pts] - FAILED
 testEnqueuePeekDequeueTime . . . [2 pts] - passed
-solid_picker_15  . . . . . . . . [4 pts] - FAILED
-gradient_picker_16 . . . . . . . [4 pts] - FAILED
-gradient_picker_17 . . . . . . . [4 pts] - FAILED
-DFS_solid  . . . . . . . . . . . [4 pts] - FAILED
-BFS_solid  . . . . . . . . . . . [4 pts] - FAILED
-DFS_grid . . . . . . . . . . . . [4 pts] - FAILED
-BFS_grid . . . . . . . . . . . . [4 pts] - FAILED
-DFS_gradient . . . . . . . . . . [4 pts] - FAILED
-BFS_gradient . . . . . . . . . . [4 pts] - FAILED
-DFS_18 . . . . . . . . . . . . . [2 pts] - FAILED
-DFS_19 . . . . . . . . . . . . . [2 pts] - FAILED
-DFS_20 . . . . . . . . . . . . . [2 pts] - FAILED
-DFS_21 . . . . . . . . . . . . . [2 pts] - FAILED
-DFS_22 . . . . . . . . . . . . . [2 pts] - FAILED
-DFS_23 . . . . . . . . . . . . . [2 pts] - FAILED
-BFS_24 . . . . . . . . . . . . . [2 pts] - FAILED
-BFS_25 . . . . . . . . . . . . . [2 pts] - FAILED
-BFS_26 . . . . . . . . . . . . . [2 pts] - FAILED
-BFS_27 . . . . . . . . . . . . . [2 pts] - FAILED
-BFS_28 . . . . . . . . . . . . . [2 pts] - FAILED
-BFS_29 . . . . . . . . . . . . . [2 pts] - FAILED
+solid_picker_15  . . . . . . . . [4 pts] - passed
+gradient_picker_16 . . . . . . . [4 pts] - passed
+gradient_picker_17 . . . . . . . [4 pts] - passed
+DFS_solid  . . . . . . . . . . . [4 pts] - passed
+BFS_solid  . . . . . . . . . . . [4 pts] - passed
+DFS_grid . . . . . . . . . . . . [4 pts] - passed
+BFS_grid . . . . . . . . . . . . [4 pts] - passed
+DFS_gradient . . . . . . . . . . [4 pts] - passed
+BFS_gradient . . . . . . . . . . [4 pts] - passed
+DFS_18 . . . . . . . . . . . . . [2 pts] - passed
+DFS_19 . . . . . . . . . . . . . [2 pts] - passed
+DFS_20 . . . . . . . . . . . . . [2 pts] - passed
+DFS_21 . . . . . . . . . . . . . [2 pts] - passed
+DFS_22 . . . . . . . . . . . . . [2 pts] - passed
+DFS_23 . . . . . . . . . . . . . [2 pts] - passed
+BFS_24 . . . . . . . . . . . . . [2 pts] - passed
+BFS_25 . . . . . . . . . . . . . [2 pts] - passed
+BFS_26 . . . . . . . . . . . . . [2 pts] - passed
+BFS_27 . . . . . . . . . . . . . [2 pts] - passed
+BFS_28 . . . . . . . . . . . . . [2 pts] - passed
+BFS_29 . . . . . . . . . . . . . [2 pts] - passed
 
 
 Total score...
 ================================================================
-TOTAL SCORE: 40
+TOTAL SCORE: 98
 
