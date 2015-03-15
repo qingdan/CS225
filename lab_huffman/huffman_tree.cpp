@@ -135,17 +135,16 @@ void HuffmanTree::buildTree( const vector<Frequency> & frequencies ) {
 	 * Finally, when there is a single node left, it is the root. Assign it
 	 * to the root and you're done!
 	 */
-	while(!frequencies.empty())
+	for(size_t i = 0; i < frequencies.size(); i++)
 	{
-		TreeNode* temp = new TreeNode(frequencies.back());
+		TreeNode* temp = new TreeNode(frequencies[i]);
 		singleQueue.push(temp);
-		frequencies.pop_back();
 	}
 	while(singleQueue.size()+mergeQueue.size() != 1)
 	{
 		TreeNode* mostSmall = removeSmallest(singleQueue, mergeQueue);
 		TreeNode* secondSmall = removeSmallest(singleQueue, mergeQueue);
-		TreeNode* parent = new TreeNode(mostSmall->frequency+secondSmall->frequency);
+		TreeNode* parent = new TreeNode(mostSmall->freq.getFrequency()+secondSmall->freq.getFrequency());
 		parent->left = secondSmall;
 		parent->right = mostSmall;
 		mergeQueue.push(parent);
@@ -164,7 +163,7 @@ string HuffmanTree::decodeFile( BinaryFileReader & bfile ) {
 }
 
 void HuffmanTree::decode( stringstream & ss, BinaryFileReader & bfile ) {
-	//TreeNode * current = root;
+	TreeNode * current = root;
 	while( bfile.hasBits() ) {
 		/**
 		 * @todo Your code here!
@@ -177,6 +176,15 @@ void HuffmanTree::decode( stringstream & ss, BinaryFileReader & bfile ) {
 		 * character to the stringstream (with operator<<, just like cout)
 		 * and start traversing from the root node again.
 		 */
+		if(current->left==NULL&&current->right==NULL)
+		{
+		ss<<(current->freq.getCharacter());
+		current = root;
+		}
+		if(bfile.getNextBit())
+			current = current->right;
+		else
+			current = current->left;  
 	}
 }
 
@@ -200,6 +208,21 @@ void HuffmanTree::writeTree( TreeNode * current, BinaryFileWriter & bfile ) {
 	 *	version: this is fine, as the structure of the tree still reflects
 	 *	what the relative frequencies were.
 	 */
+	if(current->left==NULL&&current->right==NULL)
+	{
+		bfile.writeBit(1);
+		bfile.writeByte(current->freq.getCharacter());
+	}
+	if(current->left!=NULL)
+	{
+		bfile.writeBit(0);
+		HuffmanTree::writeTree(current->left,bfile );
+	}
+	if(current->right!=NULL)
+	{
+		bfile.writeBit(0);
+		HuffmanTree::writeTree(current->right,bfile );
+	}
 }
 
 HuffmanTree::TreeNode * HuffmanTree::readTree( BinaryFileReader & bfile ) {
