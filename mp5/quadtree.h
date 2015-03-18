@@ -29,8 +29,18 @@ class Quadtree
 	//Deletes the current contents of this Quadtree object, then turns 
 	//it into a Quadtree object representing the upper-left d by d block of source. 
 	void buildTree ( PNG const & source, int resolution);	
+
+	RGBAPixel getPixel( int x, int y) const;
 	//Returns the underlying PNG object represented by the Quadtree. 	
 	PNG decompress()const;
+
+	void clockwiseRotate();
+
+	void prune(int tolerance);
+
+	int pruneSize(int tolerance) const;
+	
+	int idealPrune(int numLeaves) const;
 	private:
 
 	// A simple class representing a single node of a Quadtree.

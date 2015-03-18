@@ -20,10 +20,8 @@ Quadtree::Quadtree(){
 
 Quadtree::Quadtree ( PNG const & source, int resolution){
 	upperHorizontal = 0;
-	middleHorizontal = resolution/2;
 	lowerHorizontal = resolution;
 	leftVertical = 0;
-	middleVertical = resolution/2;
 	rightVertical = resolution;
 	root = constructQuadtree(source, upperHorizontal, lowerHorizontal, leftVertical, rightVertical);
 }
@@ -36,44 +34,67 @@ Quadtree::Quadtree (Quadtree const &other){
 	copy(other);
 }
 
-Quadtree const & operator= (Quadtree const &other){
-	if(this == other)
-		return;
-	clear();
-	copy(other);
-	return this*;
+Quadtree const & Quadtree::operator= (Quadtree const &other){
+	if(this != &other)
+	{
+		clear();
+		copy(other);
+	}
+	return *this;
 }
 
 void Quadtree::buildTree ( PNG const &  source,	int  resolution){
 	clear();
 	Quadtree(source, resolution);
 }
-PNG decompress()const{
-	PNG* pngPtr = new PNG();
-	return *pngPtr
+
+RGBAPixel Quadtree::getPixel( int x, int y) const {
+	RGBAPixel *tempPixel = new RGBAPixel();
+	return *tempPixel;
 }
 
+
+PNG Quadtree::decompress()const{
+	PNG* pngPtr = new PNG();
+	return *pngPtr;
+}
+
+void Quadtree::clockwiseRotate(){
+	return;
+} 	
+
+void Quadtree::prune(int tolerance){
+	return;
+} 	
+
+int Quadtree::pruneSize(int	tolerance) const{
+	return 0;
+}
+
+int Quadtree::idealPrune(int numLeaves) const{
+	return 0;
+}
 //helper function
-QuadtreeNode* Quadtree::constructQuadtree(source, upperHorizontal, lowerHorizontal, leftVertical, rightVertical){
-	if(upperHorizontal+1 == lowerHorizontal)
+Quadtree::QuadtreeNode* Quadtree::constructQuadtree(source, UpperHorizontal, LowerHorizontal, LeftVertical, RightVertical){
+	if(UpperHorizontal+1 == LowerHorizontal)
 	{
 	QuadtreeNode* croot = new QuadtreeNode();
 	croot->nwChild = NULL;
 	croot->neChild = NULL;
 	croot->swChild = NULL;
 	croot->seChild = NULL;
-	croot->element = *source(leftVertical, upperHorizontal);
+	croot->element = *source(LeftVertical, UpperHorizontal);
 	return croot;
 	}
 	else
 	{
 	QuadtreeNode* croot = new QuadtreeNode();
-	int d = lowerHorizontal - upperHorizontal;
-	croot->nwChild = constructQuadtree(source, upperHorizontal, upperHorizontal+d/2, leftVertical+d/2, rightVertical);
-	croot->neChild = constructQuadtree(source, upperHorizontal, upperHorizontal+d/2, leftVertical, leftVertical+d/2);
-	croot->swChild = constructQuadtree(source, upperHorizontal+d/2, lowerHorizontal, leftVertical, leftVertical+d/2);
-	croot->seChild = constructQuadtree(source, upperHorizontal+d/2, lowerHorizontal, leftVertical+d/2, rightVertical);
-	croot->element = *source(leftVertical+d/2, upperHorizontal+d/2);
+	int d = LowerHorizontal - UpperHorizontal;
+	croot->nwChild = constructQuadtree(source, UpperHorizontal, UpperHorizontal+d/2, LeftVertical+d/2, RightVertical);
+	croot->neChild = constructQuadtree(source, UpperHorizontal, UpperHorizontal+d/2, LeftVertical, LeftVertical+d/2);
+	croot->swChild = constructQuadtree(source, UpperHorizontal+d/2, LowerHorizontal, LeftVertical, LeftVertical+d/2);
+	croot->seChild = constructQuadtree(source, UpperHorizontal+d/2, LowerHorizontal, LeftVertical+d/2, RightVertical);
+	croot->element = *source(LeftVertical+d/2, UpperHorizontal+d/2);
 	return croot;
 	}
 
