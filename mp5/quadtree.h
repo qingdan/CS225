@@ -16,9 +16,21 @@
 class Quadtree
 {
 	public:
-	
-	
-	
+	//the default constructor
+	Quadtree(); 
+	//the constructor with two arguments	
+	Quadtree ( PNG const & source, int resolution); 
+	//desctructor
+	~Quadtree ();
+	//copy constructor
+	Quadtree (Quadtree const &other);
+	//assign operator
+	Quadtree const & operator= (Quadtree const &other);
+	//Deletes the current contents of this Quadtree object, then turns 
+	//it into a Quadtree object representing the upper-left d by d block of source. 
+	void buildTree ( PNG const & source, int resolution);	
+	//Returns the underlying PNG object represented by the Quadtree. 	
+	PNG decompress()const;
 	private:
 
 	// A simple class representing a single node of a Quadtree.
@@ -37,8 +49,17 @@ class Quadtree
 	
 	QuadtreeNode* root;    // pointer to root of quadtree
 	
-	
-	
+	int upperHorizontal;
+	int lowerHorizontal;
+	int leftVertical;
+	int rightVertical;
+
+	//helper functions
+	QuadtreeNode* constructQuadtree(PNG const & source, int upperHorizontal, int lowerHorizontal, int leftVertical, int rightVertical);
+	void clear();
+	void clearTheRoot( QuadtreeNode* croot);
+	void copy( const Quadtree & other );
+	void copyTheRoot(QuadtreeNode* otherCroot);
 	/**** Functions added for testing/grading                ****/
 	/**** Do not remove this line or copy its contents here! ****/
 	#include "quadtree_given.h"
