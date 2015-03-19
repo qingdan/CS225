@@ -29,7 +29,7 @@ class Quadtree
 	//Deletes the current contents of this Quadtree object, then turns 
 	//it into a Quadtree object representing the upper-left d by d block of source. 
 	void buildTree ( PNG const & source, int resolution);	
-
+	//returns The pixel at the given (x, y) location 
 	RGBAPixel getPixel( int x, int y) const;
 	//Returns the underlying PNG object represented by the Quadtree. 	
 	PNG decompress()const;
@@ -65,11 +65,12 @@ class Quadtree
 	int rightVertical;
 
 	//helper functions
-	QuadtreeNode* constructQuadtree(PNG const & source, int upperHorizontal, int lowerHorizontal, int leftVertical, int rightVertical);
+	QuadtreeNode* constructQuadtree(PNG const & source, int upYaxis, int downYaxis, int leftXaxis, int rightXaxis);
 	void clear();
 	void clearTheRoot( QuadtreeNode* croot);
 	void copy( const Quadtree & other );
-	void copyTheRoot(QuadtreeNode* otherCroot);
+	QuadtreeNode* copyTheRoot(QuadtreeNode* otherCroot);
+	QuadtreeNode* help_getPixel(int x, int y, int leftBoundary, int rightBoundary, int upBoundary, int downBoundary, QuadtreeNode* curr) const;
 	/**** Functions added for testing/grading                ****/
 	/**** Do not remove this line or copy its contents here! ****/
 	#include "quadtree_given.h"

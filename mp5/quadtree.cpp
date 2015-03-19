@@ -49,14 +49,31 @@ void Quadtree::buildTree ( PNG const &  source,	int  resolution){
 }
 
 RGBAPixel Quadtree::getPixel( int x, int y) const {
-	RGBAPixel *tempPixel = new RGBAPixel();
-	return *tempPixel;
+	if(x<0||x>=rightVertical||y<0||y>=lowerHorizontal||root==NULL)
+	{
+		RGBAPixel tempPixel;
+		return tempPixel;
+	}
+	QuadtreeNode* curr = help_getPixel(x,y,0,rightVertical,0,lowerHorizontal,root);
+	return curr->element;
 }
 
 
 PNG Quadtree::decompress()const{
-	PNG* pngPtr = new PNG();
-	return *pngPtr;
+	if(root == NULL)
+	{
+		PNG tempPicture;
+		return tempPicture;
+	}
+	PNG::PNG tempPicture(rightVertical, lowerHorizontal);
+	for(int x = 0; x < rightVertical; x++)
+	{
+		for(int y = 0; y < lowerHorizontal; y++)
+		{
+			*tempPicture(x,y) = getPixel(x,y);
+		}
+	}
+	return tempPicture;
 }
 
 void Quadtree::clockwiseRotate(){
@@ -67,7 +84,7 @@ void Quadtree::prune(int tolerance){
 	return;
 } 	
 
-int Quadtree::pruneSize(int	tolerance) const{
+int Quadtree::pruneSize(int tolerance) const{
 	return 0;
 }
 
@@ -75,37 +92,37 @@ int Quadtree::idealPrune(int numLeaves) const{
 	return 0;
 }
 //helper function
-Quadtree::QuadtreeNode* Quadtree::constructQuadtree(source, UpperHorizontal, LowerHorizontal, LeftVertical, RightVertical){
-	if(UpperHorizontal+1 == LowerHorizontal)
+Quadtree::QuadtreeNode* Quadtree::constructQuadtree(PNG const & source, int upYaxis, int downYaxis, int leftXaxis, int rightXaxis){
+	if(upYaxis+1 == downYaxis)
 	{
 	QuadtreeNode* croot = new QuadtreeNode();
 	croot->nwChild = NULL;
 	croot->neChild = NULL;
 	croot->swChild = NULL;
 	croot->seChild = NULL;
-	croot->element = *source(LeftVertical, UpperHorizontal);
+	croot->element = *source(leftXaxis, upYaxis);
 	return croot;
 	}
 	else
 	{
 	QuadtreeNode* croot = new QuadtreeNode();
-	int d = LowerHorizontal - UpperHorizontal;
-	croot->nwChild = constructQuadtree(source, UpperHorizontal, UpperHorizontal+d/2, LeftVertical+d/2, RightVertical);
-	croot->neChild = constructQuadtree(source, UpperHorizontal, UpperHorizontal+d/2, LeftVertical, LeftVertical+d/2);
-	croot->swChild = constructQuadtree(source, UpperHorizontal+d/2, LowerHorizontal, LeftVertical, LeftVertical+d/2);
-	croot->seChild = constructQuadtree(source, UpperHorizontal+d/2, LowerHorizontal, LeftVertical+d/2, RightVertical);
-	croot->element = *source(LeftVertical+d/2, UpperHorizontal+d/2);
+	int d = downYaxis - upYaxis;
+	croot->nwChild = constructQuadtree(source, upYaxis, upYaxis+d/2, leftXaxis, leftXaxis+d/2);
+	croot->neChild = constructQuadtree(source, upYaxis, upYaxis+d/2, leftXaxis+d/2, rightXaxis);
+	croot->swChild = constructQuadtree(source, upYaxis+d/2, downYaxis, leftXaxis, leftXaxis+d/2);
+	croot->seChild = constructQuadtree(source, upYaxis+d/2, downYaxis, leftXaxis+d/2, rightXaxis);
+	croot->element = *source(leftXaxis+d/2, upYaxis+d/2);
 	return croot;
 	}
 
 }
 
-void clear(){
+void Quadtree::clear(){
 	clearTheRoot(root);
 	root = NULL;	
 }
 
-void clearTheRoot( QuadtreeNode* croot){
+void Quadtree::clearTheRoot( QuadtreeNode* croot){
 	if(croot == NULL)
 		return;
 	clearTheRoot(croot->nwChild);
@@ -119,11 +136,11 @@ void clearTheRoot( QuadtreeNode* croot){
 	delete croot;
 }
 
-void copy(other){
+void Quadtree::copy(const Quadtree & other){
 	root = copyTheRoot(other.root);
 }
 
-void copyTheRoot(QuadtreeNode* otherCroot){
+Quadtree::QuadtreeNode* Quadtree::copyTheRoot(QuadtreeNode* otherCroot){
 	if(otherCroot == NULL)
 		return NULL;
 	QuadtreeNode* thisCroot = new QuadtreeNode(); 
@@ -135,3 +152,17 @@ void copyTheRoot(QuadtreeNode* otherCroot){
 	return thisCroot;
 
 } 
+
+Quadtree::QuadtreeNode* Quadtree::help_getPixel(int x, int y, int leftBoundary, int rightBoundary, int upBoundary, int downBoundary, QuadtreeNode* curr) const {
+	if(curr->nwChild == NULL)
+		return curr;
+	int d = rightBoundary - leftBoundary;
+	if(x<leftBoundary+d/2&&y<upBoundary+d/2)		
+		return help_getPixel(x,y,leftBoundary,leftBoundary+d/2,upBoundary,upBoundary+d/2,curr->nwChild);
+	else if(x>=leftBoundary+d/2&&y<upBoundary+d/2)		
+		return help_getPixel(x,y,leftBoundary+d/2,rightBoundary,upBoundary,upBoundary+d/2,curr->neChild);
+	else if(x<leftBoundary+d/2&&y>=upBoundary+d/2)	
+		return help_getPixel(x,y,leftBoundary,leftBoundary+d/2,upBoundary+d/2,downBoundary,curr->swChild);
+	else
+		return help_getPixel(x,y,leftBoundary+d/2,rightBoundary,upBoundary+d/2,downBoundary,curr->seChild);
+}
