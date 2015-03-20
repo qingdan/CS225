@@ -161,7 +161,6 @@ Quadtree::QuadtreeNode* Quadtree::copyTheRoot(QuadtreeNode* otherCroot){
 	thisCroot->swChild = copyTheRoot(otherCroot->swChild);
 	thisCroot->seChild = copyTheRoot(otherCroot->seChild);
 	return thisCroot;
-
 } 
 
 Quadtree::QuadtreeNode* Quadtree::help_getPixel(int x, int y, int leftBoundary, int rightBoundary, int upBoundary, int downBoundary, QuadtreeNode* curr) const {
