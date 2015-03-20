@@ -45,7 +45,11 @@ Quadtree const & Quadtree::operator= (Quadtree const &other){
 
 void Quadtree::buildTree ( PNG const &  source,	int  resolution){
 	clear();
-	Quadtree(source, resolution);
+	upperHorizontal = 0;
+	lowerHorizontal = resolution;
+	leftVertical = 0;
+	rightVertical = resolution;
+	root = constructQuadtree(source, upperHorizontal, lowerHorizontal, leftVertical, rightVertical);
 }
 
 RGBAPixel Quadtree::getPixel( int x, int y) const {
@@ -111,7 +115,10 @@ Quadtree::QuadtreeNode* Quadtree::constructQuadtree(PNG const & source, int upYa
 	croot->neChild = constructQuadtree(source, upYaxis, upYaxis+d/2, leftXaxis+d/2, rightXaxis);
 	croot->swChild = constructQuadtree(source, upYaxis+d/2, downYaxis, leftXaxis, leftXaxis+d/2);
 	croot->seChild = constructQuadtree(source, upYaxis+d/2, downYaxis, leftXaxis+d/2, rightXaxis);
-	croot->element = *source(leftXaxis+d/2, upYaxis+d/2);
+	croot->element.red = (croot->nwChild->element.red+croot->neChild->element.red+croot->swChild->element.red+croot->seChild->element.red)/4;
+	croot->element.green = (croot->nwChild->element.green+croot->neChild->element.green+croot->swChild->element.green+croot->seChild->element.green)/4;
+	croot->element.blue = (croot->nwChild->element.blue+croot->neChild->element.blue+croot->swChild->element.blue+croot->seChild->element.blue)/4;
+	croot->element.alpha = (croot->nwChild->element.alpha+croot->neChild->element.alpha+croot->swChild->element.alpha+croot->seChild->element.alpha)/4;
 	return croot;
 	}
 
@@ -137,6 +144,10 @@ void Quadtree::clearTheRoot( QuadtreeNode* croot){
 }
 
 void Quadtree::copy(const Quadtree & other){
+	upperHorizontal = other.upperHorizontal;
+	lowerHorizontal = other.lowerHorizontal;
+	leftVertical = other.leftVertical;
+	rightVertical = other.rightVertical;	
 	root = copyTheRoot(other.root);
 }
 
