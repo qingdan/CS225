@@ -1,0 +1,44 @@
+Grading revision r28169 by kwang40, dated 2015-03-20 02:28:04.000750022 -0500 CDT
+Monad Autograder
+Testing mp5.1 at 2015-03-21 00:31:07
+
+"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. Code for readability." ~ John Woods
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_default_ctor  . . . . [4 pts] - passed
+test_ctor_1  . . . . . . . [4 pts] - passed
+test_ctor_2  . . . . . . . [4 pts] - passed
+test_buildTree_1 . . . . . [4 pts] - passed
+test_buildTree_2 . . . . . [4 pts] - passed
+test_buildTree_3 . . . . . [4 pts] - passed
+test_cctor_1 . . . . . . . [2 pts] - passed
+test_cctor_2 . . . . . . . [2 pts] - passed
+test_cctor_3 . . . . . . . [2 pts] - passed
+test_cctor_4 . . . . . . . [4 pts] - passed
+test_assign_op_1 . . . . . [2 pts] - passed
+test_assign_op_2 . . . . . [2 pts] - passed
+test_assign_op_3 . . . . . [2 pts] - passed
+test_assign_op_4 . . . . . [4 pts] - passed
+test_getPixel_1  . . . . . [4 pts] - passed
+test_getPixel_2  . . . . . [4 pts] - passed
+test_getPixel_3  . . . . . [4 pts] - passed
+test_getPixel_4  . . . . . [4 pts] - passed
+test_decompress_unpruned_1 [4 pts] - passed
+test_decompress_unpruned_2 [4 pts] - passed
+test_decompress_unpruned_3 [6 pts] - passed
+test_decompress_unpruned_4 [6 pts] - passed
+time_getPixel_logn . . . . [6 pts] - passed
+time_decompress_n (asan) . [6 pts] - passed
+valgrind_big3 (asan) . . . [8 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
