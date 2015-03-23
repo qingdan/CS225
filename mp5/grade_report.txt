@@ -1,8 +1,8 @@
-Grading revision r28965 by tolar2, dated 2015-03-21 00:44:23.000118424 -0500 CDT
+Grading revision r29046 by tolar2, dated 2015-03-22 01:03:36.000981977 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-03-22 00:42:17
+Testing mp5 at 2015-03-23 00:41:04
 
-"On two occasions, I have been asked [by members of Parliament], 'Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?' I am not able to rightly apprehend the kind of confusion of ideas that could provoke such a question." ~ Charles Babbage
+"int getRandomNumber() { return 4; } // chosen by fair dice roll. guaranteed to be random." ~ XKCD #221
 
 Setting up test environment...
 Compiling...
