@@ -1,8 +1,8 @@
-Grading revision r29046 by tolar2, dated 2015-03-22 01:03:36.000981977 -0500 CDT
+Grading revision r29137 by tolar2, dated 2015-03-23 01:02:20.000606599 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-03-23 00:41:04
+Testing mp5 at 2015-03-24 00:39:50
 
-"int getRandomNumber() { return 4; } // chosen by fair dice roll. guaranteed to be random." ~ XKCD #221
+"The most amazing achievement of the computer software industry is its continuing cancellation of the steady and staggering gains made by the computer hardware industry." ~ Henry Petroski
 
 Setting up test environment...
 Compiling...
