@@ -1,8 +1,8 @@
-Grading revision r29137 by tolar2, dated 2015-03-23 01:02:20.000606599 -0500 CDT
+Grading revision r29284 by tolar2, dated 2015-03-24 01:00:51.00026225 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-03-24 00:39:50
+Testing mp5 at 2015-03-25 00:33:30
 
-"The most amazing achievement of the computer software industry is its continuing cancellation of the steady and staggering gains made by the computer hardware industry." ~ Henry Petroski
+"It may look like I'm doing nothing, but I'm actively waiting for my problems to go away." ~ Scott Adams
 
 Setting up test environment...
 Compiling...
