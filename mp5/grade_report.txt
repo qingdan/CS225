@@ -1,8 +1,8 @@
-Grading revision r29284 by tolar2, dated 2015-03-24 01:00:51.00026225 -0500 CDT
+Grading revision r29519 by tolar2, dated 2015-03-25 00:54:24.000938694 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-03-25 00:33:30
+Testing mp5 at 2015-03-26 00:41:52
 
-"It may look like I'm doing nothing, but I'm actively waiting for my problems to go away." ~ Scott Adams
+"It is practically impossible to teach good programming to students that have had a prior exposure to BASIC: as potential programmers they are mentally mutilated beyond hope of regeneration." ~ Edsger Dijkstra
 
 Setting up test environment...
 Compiling...
