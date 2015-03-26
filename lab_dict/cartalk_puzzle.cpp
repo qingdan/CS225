@@ -24,7 +24,35 @@ vector< StringTriple > cartalk_puzzle(PronounceDict d,
                                       const string& word_list_fname)
 {
     /* Your code goes here! */
-    return vector< StringTriple >();
+	vector< StringTriple> out;
+	vector< string > vectorWords;
+	ifstream words(word_list_fname);
+	string word;
+	if(words.is_open()) 
+	{
+    /* Reads a line from words into word until the file ends. */
+   		while(getline(words, word)) 
+        {
+			if(word.length() == 5)
+				vectorWords.push_back(word);
+		}
+	}
+	for(auto & eachWord : vectorWords)
+	{
+		std:: string removeFirst = eachWord.substr(1);
+		std:: string removeSecond;
+		removeSecond.append(eachWord.begin(),eachWord.begin()+1);
+		removeSecond.append(removeFirst.begin()+1,removeFirst.end());
+		if(d.homophones(eachWord, removeFirst)&&d.homophones(eachWord, removeSecond)&&d.homophones(removeFirst, removeSecond))
+		{	
+			StringTriple answer;
+			std::get<0>(answer) = eachWord; 
+			std::get<1>(answer) = removeFirst;
+			std::get<2>(answer) = removeSecond;
+			out.push_back(answer);
+		}			 
+	}
+    return out;
 }
 
 

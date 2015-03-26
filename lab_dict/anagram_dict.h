@@ -13,6 +13,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <algorithm>
 
 /**
  * AnagramDict class. Provides interfaces for looking up all anagrams of a
@@ -56,7 +57,10 @@ class AnagramDict
     std::vector< std::vector< std::string > > get_all_anagrams() const;
 
     private: 
-    std::map< std::string, std::vector< std::string> > dict;
+    std::map< std::string, std::vector< char > > dict;
+	//helper function
+	std::vector< std::string > helper_get_anagrams(const std::string& word) const;
+	
 };
 
 

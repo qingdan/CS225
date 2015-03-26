@@ -23,6 +23,27 @@ using std::ifstream;
 AnagramDict::AnagramDict(const string& filename)
 {
     /* Your code goes here! */
+	vector< string > vectorWords;
+	ifstream words(filename);
+	string word;
+	if(words.is_open()) 
+	{
+    /* Reads a line from words into word until the file ends. */
+   		while(getline(words, word)) 
+        	vectorWords.push_back(word);
+	}
+	for(auto & vectorIt : vectorWords)
+	{
+		auto lookup = dict.find(vectorIt);
+		if(lookup == dict.end())
+		{
+			std::vector <char> vectorChar;
+			for (size_t i=0; i<vectorIt.length(); ++i)
+    			vectorChar.push_back(vectorIt.at(i));
+			std::sort(vectorChar.begin(),vectorChar.end());
+			dict.insert(std::pair<string, std::vector< char >>(vectorIt, vectorChar));
+		}	
+	}
 }
 
 /** 
@@ -32,6 +53,18 @@ AnagramDict::AnagramDict(const string& filename)
 AnagramDict::AnagramDict(const vector< string >& words)
 {
     /* Your code goes here! */
+	for(auto & vectorIt : words)
+	{
+		auto lookup = dict.find(vectorIt);
+		if(lookup == dict.end())
+		{
+			std::vector <char> vectorChar;
+			for (size_t i=0; i<vectorIt.length(); ++i)
+    			vectorChar.push_back(vectorIt.at(i));
+			std::sort(vectorChar.begin(),vectorChar.end());
+			dict.insert(std::pair<string, std::vector< char >>(vectorIt, vectorChar));
+		}	
+	}
 }
 
 /**
@@ -43,7 +76,12 @@ AnagramDict::AnagramDict(const vector< string >& words)
 vector< string > AnagramDict::get_anagrams(const string& word) const
 {
     /* Your code goes here! */
-    return vector< string >();
+	vector< string > out;
+	out = helper_get_anagrams(word);
+	if(out.size() > 1)
+    	return out;
+	else
+		return vector< string >();
 }       
 
 /**
@@ -55,7 +93,31 @@ vector< string > AnagramDict::get_anagrams(const string& word) const
 vector< vector< string > > AnagramDict::get_all_anagrams() const
 {
     /* Your code goes here! */
-    return vector< vector < string > >();
+	vector< vector < string > > allVector;
+	for(auto& dictIt : dict)
+	{
+		string tempWord = dictIt.first;
+		vector< string > smallVector = helper_get_anagrams(tempWord);
+		if(smallVector.size() > 1)
+			allVector.push_back(smallVector);
+	}
+    return allVector;
 }
 
-
+//helper function
+vector< string > AnagramDict::helper_get_anagrams(const string& word) const
+{
+    /* Your code goes here! */
+	vector< string > out;
+	auto lookup = dict.find(word);
+	if(lookup != dict.end())
+	{
+		vector< char > vectorChar = lookup->second;
+		for(auto & dictIt : dict)
+		{
+			if(dictIt.second == vectorChar)
+				out.push_back(dictIt.first);
+		}
+	}
+    return out;
+}  
