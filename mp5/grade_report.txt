@@ -1,8 +1,8 @@
-Grading revision r29750 by tolar2, dated 2015-03-26 01:02:57.00013354 -0500 CDT
+Grading revision r30044 by tolar2, dated 2015-03-27 00:59:28.000522572 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-03-27 00:39:18
+Testing mp5 at 2015-03-28 00:41:34
 
-"It may look like I'm doing nothing, but I'm actively waiting for my problems to go away." ~ Scott Adams
+"Be careful about using the following code -- I've only proven that it works, I haven't tested it." ~ Donald Knuth
 
 Setting up test environment...
 Compiling...
