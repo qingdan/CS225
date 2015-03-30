@@ -1,8 +1,8 @@
-Grading revision r30384 by tolar2, dated 2015-03-28 01:02:13.000598468 -0500 CDT
+Grading revision r30648 by tolar2, dated 2015-03-29 01:00:02.000310511 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-03-29 00:39:07
+Testing mp5 at 2015-03-30 01:32:30
 
-"Any sufficiently advanced bug is indistinguishable from a feature." ~ Rich Kulawiec
+"Hulp -> Wat is dit?" ~ LibreOffice Impress
 
 Setting up test environment...
 Compiling...
