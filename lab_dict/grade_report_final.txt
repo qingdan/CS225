@@ -1,0 +1,27 @@
+Grading revision r29752 by kwang40, dated 2015-03-26 01:12:16.00089499 -0500 CDT
+Monad Autograder
+Testing lab_dict at 2015-03-30 00:40:27
+
+"It's like comparing a small apple with a medium-sized apple." ~ Jason Cho
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_get_anagrams  . . . . [15 pts] - passed
+test_get_all_anagrams  . . [15 pts] - passed
+test_fib . . . . . . . . . [5 pts]  - passed
+test_memoized_fib  . . . . [15 pts] - passed
+test_homophones  . . . . . [10 pts] - passed
+test_cartalk_puzzle  . . . [10 pts] - passed
+test_get_common_words_3  . [15 pts] - passed
+test_get_common_words_3000 [15 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
