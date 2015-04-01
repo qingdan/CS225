@@ -1,8 +1,8 @@
-Grading revision r31557 by tolar2, dated 2015-03-30 01:55:11.000514473 -0500 CDT
+Grading revision r31889 by tolar2, dated 2015-03-31 01:04:18.000416118 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-03-31 00:40:42
+Testing mp5 at 2015-04-01 00:45:05
 
-"If I had a 3D Reese's chocolate printer I would use that thing all the time always." ~ Chase Geigle
+"Find your points of interest, compute HOG features, bung them into a classifier, and see what you get." ~ D.A. Forsyth
 
 Setting up test environment...
 Compiling...
