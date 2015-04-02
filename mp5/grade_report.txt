@@ -1,8 +1,8 @@
-Grading revision r31889 by tolar2, dated 2015-03-31 01:04:18.000416118 -0500 CDT
+Grading revision r32181 by tolar2, dated 2015-04-01 01:08:14.000210081 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-04-01 00:45:05
+Testing mp5 at 2015-04-02 00:44:04
 
-"Find your points of interest, compute HOG features, bung them into a classifier, and see what you get." ~ D.A. Forsyth
+"Simplicity and elegance are unpopular because they require hard work and discipline to achieve and education to be appreciated." ~ Edsger Dijkstra
 
 Setting up test environment...
 Compiling...
