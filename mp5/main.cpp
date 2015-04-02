@@ -36,12 +36,12 @@ int main() {
 
 
    // Test some creation/deletion functions
- /*  Quadtree fullTree2;
+   Quadtree fullTree2;
    fullTree2 = fullTree;
    imgOut = fullTree2.decompress();
    imgOut.writeToFile("outCopy.png");
 
-
+/*
    // test clockwiseRotate
    fullTree.clockwiseRotate();
    imgOut = fullTree.decompress();
@@ -56,7 +56,7 @@ int main() {
 
 
    // test several functions in succession
-/*   Quadtree fullTree3(fullTree2);
+   Quadtree fullTree3(fullTree2);
    fullTree3.clockwiseRotate();
    fullTree3.prune(10000);
    fullTree3.clockwiseRotate();
@@ -64,7 +64,7 @@ int main() {
    fullTree3.clockwiseRotate();
    imgOut = fullTree3.decompress();
    imgOut.writeToFile("outEtc.png");
-
+/*
    // ensure that printTree still works
 //   Quadtree tinyTree(imgIn, 4);
  //  cout << "Printing tinyTree:\n";

@@ -110,10 +110,10 @@ int Quadtree::pruneSize(int tolerance) const{
 }
 
 int Quadtree::idealPrune(int numLeaves) const{
-	int maxTolerance = 300;
-	while(pruneSize(maxTolerance)<=numLeaves)
-		maxTolerance += 300;
-	return findIdeal(maxTolerance-300, maxTolerance, numLeaves);
+	int maxTolerance = 1000;
+	while(pruneSize(maxTolerance) > numLeaves)
+		maxTolerance += 1000;
+	return findIdeal(maxTolerance-1000, maxTolerance, numLeaves);
 }
 //helper function
 Quadtree::QuadtreeNode* Quadtree::constructQuadtree(PNG const & source, int upYaxis, int downYaxis, int leftXaxis, int rightXaxis){
@@ -291,19 +291,9 @@ int Quadtree::findIdeal(int minTolerance, int maxTolerance, int numLeaves) const
 	if(resultOfMid<=numLeaves&&resultOfMidMi>numLeaves)
 		return midTolerance;
 	if(maxTolerance  == midTolerance)
-			return midTolerance-1;
+		return midTolerance-1;
 	if(resultOfMid <= numLeaves)
 		return findIdeal(minTolerance, midTolerance-1, numLeaves);
 	else
 		return findIdeal(midTolerance+1, maxTolerance, numLeaves);
 }
-
-/*bool Quadtree::testIdeal(int testTolerance, int numLeaves)
-{
-	int result = pruneSize(testTolerance);
-	int resultMi = pruneSize(testTolerance-1);
-	if(result<=numLeaves&&resultMi>numLeaves)
-		return true;
-	else
-		return false;
-}*/
