@@ -71,9 +71,14 @@ class Quadtree
 	void copy( const Quadtree & other );
 	QuadtreeNode* copyTheRoot(QuadtreeNode* otherCroot);
 	QuadtreeNode* help_getPixel(int x, int y, int leftBoundary, int rightBoundary, int upBoundary, int downBoundary, QuadtreeNode* curr) const;
+	void helpRotation(QuadtreeNode* currNode);
+	void helpPrune(QuadtreeNode* currNode, int tolerance);
+	bool checkNode(QuadtreeNode* OriginNode, QuadtreeNode* currNode, int tolerance);
+	bool meetPrune(QuadtreeNode* oneNode, QuadtreeNode* otherNode, int tolerance);
+	int countNodes(QuadtreeNode* theNode) const;
+	int findIdeal(int minTolerance, int maxTolerance, int numLeaves) const;
 	/**** Functions added for testing/grading                ****/
 	/**** Do not remove this line or copy its contents here! ****/
 	#include "quadtree_given.h"
 };
-
 #endif
