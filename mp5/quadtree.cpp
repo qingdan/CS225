@@ -120,7 +120,7 @@ void Quadtree::clockwiseRotate()
 
 void Quadtree::prune(int tolerance)
 {
-	if(root == NULL)
+	if(root == NULL||tolerance < 0)
 		return;	
 	helpPrune(root, tolerance);
 	return;
@@ -128,7 +128,7 @@ void Quadtree::prune(int tolerance)
 
 int Quadtree::pruneSize(int tolerance) const
 {
-	if(root == NULL)
+	if(root == NULL||tolerance < 0)
 		return 0;
 	Quadtree* tempTree = new Quadtree(*this);
 	tempTree->prune(tolerance);
