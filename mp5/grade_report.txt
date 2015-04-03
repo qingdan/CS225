@@ -1,8 +1,8 @@
-Grading revision r30648 by tolar2, dated 2015-03-29 01:00:02.000310511 -0500 CDT
+Grading revision r32898 by kwang40, dated 2015-04-02 15:29:19.000721712 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-04-03 10:02:28
+Testing mp5 at 2015-04-03 10:48:50
 
-"I didn't say I wanted to die in a blender! I said I wanted to be in a blender!" ~ Kyle Johnson
+"I hear and I forget; I see and I remember; I do and I understand." ~ Confucius
 
 Setting up test environment...
 Compiling...
@@ -36,33 +36,33 @@ test_decompress_unpruned_4 [1 pts] - passed
 time_getPixel_logn . . . . [4 pts] - passed
 time_decompress_n (asan) . [4 pts] - passed
 valgrind_big3 (asan) . . . [4 pts] - passed
-test_clockwiseRotate_1 . . [1 pts] - passed
-test_clockwiseRotate_2 . . [1 pts] - FAILED
-test_clockwiseRotate_3 . . [2 pts] - FAILED
-test_clockwiseRotate_4 . . [2 pts] - FAILED
-test_prune_1 . . . . . . . [2 pts] - passed
-test_prune_2 . . . . . . . [3 pts] - FAILED
-test_prune_3 . . . . . . . [2 pts] - FAILED
-test_prune_4 . . . . . . . [5 pts] - FAILED
+test_clockwiseRotate_1 . . [1 pts] - FAILED
+test_clockwiseRotate_2 . . [1 pts] - passed
+test_clockwiseRotate_3 . . [2 pts] - passed
+test_clockwiseRotate_4 . . [2 pts] - passed
+test_prune_1 . . . . . . . [2 pts] - FAILED
+test_prune_2 . . . . . . . [3 pts] - passed
+test_prune_3 . . . . . . . [2 pts] - passed
+test_prune_4 . . . . . . . [5 pts] - passed
 test_prune_copy  . . . . . [2 pts] - passed
-test_prune_rotate  . . . . [2 pts] - FAILED
-test_prune_getPixel  . . . [3 pts] - FAILED
-test_pruneSize_1 . . . . . [2 pts] - passed
-test_pruneSize_2 . . . . . [2 pts] - FAILED
-test_pruneSize_3 . . . . . [2 pts] - FAILED
-test_pruneSize_4 . . . . . [2 pts] - FAILED
-test_pruneSize_5 . . . . . [2 pts] - FAILED
-test_idealPrune_1  . . . . [2 pts] - FAILED
-test_idealPrune_2  . . . . [3 pts] - FAILED
+test_prune_rotate  . . . . [2 pts] - passed
+test_prune_getPixel  . . . [3 pts] - passed
+test_pruneSize_1 . . . . . [2 pts] - FAILED
+test_pruneSize_2 . . . . . [2 pts] - passed
+test_pruneSize_3 . . . . . [2 pts] - passed
+test_pruneSize_4 . . . . . [2 pts] - passed
+test_pruneSize_5 . . . . . [2 pts] - passed
+test_idealPrune_1  . . . . [2 pts] - passed
+test_idealPrune_2  . . . . [3 pts] - passed
 test_idealPrune_3  . . . . [2 pts] - passed
-test_idealPrune_4  . . . . [5 pts] - FAILED
-val_clockwiseRotate (asan) [2 pts] - FAILED
-val_prune (asan) . . . . . [4 pts] - FAILED
+test_idealPrune_4  . . . . [5 pts] - passed
+val_clockwiseRotate (asan) [2 pts] - passed
+val_prune (asan) . . . . . [4 pts] - passed
 val_idealPrune (asan)  . . [3 pts] - FAILED
 test_const_correctness . . [4 pts] - passed
 
 
 Total score...
 ================================================================
-TOTAL SCORE: 53
+TOTAL SCORE: 92
 
