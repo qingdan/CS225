@@ -1,8 +1,8 @@
-Grading revision r32181 by tolar2, dated 2015-04-01 01:08:14.000210081 -0500 CDT
+Grading revision r30648 by tolar2, dated 2015-03-29 01:00:02.000310511 -0500 CDT
 Monad Autograder
-Testing mp5 at 2015-04-02 00:44:04
+Testing mp5 at 2015-04-03 10:02:28
 
-"Simplicity and elegance are unpopular because they require hard work and discipline to achieve and education to be appreciated." ~ Edsger Dijkstra
+"I didn't say I wanted to die in a blender! I said I wanted to be in a blender!" ~ Kyle Johnson
 
 Setting up test environment...
 Compiling...
