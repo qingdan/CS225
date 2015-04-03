@@ -21,11 +21,22 @@ Quadtree::Quadtree()
 
 Quadtree::Quadtree ( PNG const & source, int resolution)
 {
-	upperHorizontal = 0;
-	lowerHorizontal = resolution;
-	leftVertical = 0;
-	rightVertical = resolution;
-	root = constructQuadtree(source, upperHorizontal, lowerHorizontal, leftVertical, rightVertical);
+	if(resolution == 0)
+	{
+		root = NULL;
+		upperHorizontal = 0;
+		lowerHorizontal = 0;
+		leftVertical = 0;
+		rightVertical = 0;
+	}
+	else
+	{	
+		upperHorizontal = 0;
+		lowerHorizontal = resolution;
+		leftVertical = 0;
+		rightVertical = resolution;
+		root = constructQuadtree(source, upperHorizontal, lowerHorizontal, leftVertical, rightVertical);
+	}
 }
 
 Quadtree::~Quadtree ()
@@ -51,11 +62,22 @@ Quadtree const & Quadtree::operator= (Quadtree const &other)
 void Quadtree::buildTree ( PNG const &  source,	int  resolution)
 {
 	clear();
-	upperHorizontal = 0;
-	lowerHorizontal = resolution;
-	leftVertical = 0;
-	rightVertical = resolution;
-	root = constructQuadtree(source, upperHorizontal, lowerHorizontal, leftVertical, rightVertical);
+	if(resolution == 0)
+	{
+		root = NULL;
+		upperHorizontal = 0;
+		lowerHorizontal = 0;
+		leftVertical = 0;
+		rightVertical = 0;
+	}
+	else
+	{
+		upperHorizontal = 0;
+		lowerHorizontal = resolution;
+		leftVertical = 0;
+		rightVertical = resolution;
+		root = constructQuadtree(source, upperHorizontal, lowerHorizontal, leftVertical, rightVertical);
+	}
 }
 
 RGBAPixel Quadtree::getPixel( int x, int y) const 
@@ -90,33 +112,49 @@ PNG Quadtree::decompress()const
 
 void Quadtree::clockwiseRotate()
 {
+	if(root == NULL)
+		return;	
 	helpRotation(root);	
 	return;
 } 	
 
 void Quadtree::prune(int tolerance)
 {
+	if(root == NULL)
+		return;	
 	helpPrune(root, tolerance);
 	return;
 } 	
 
-int Quadtree::pruneSize(int tolerance) const{
+int Quadtree::pruneSize(int tolerance) const
+{
+	if(root == NULL)
+		return 0;
 	Quadtree* tempTree = new Quadtree(*this);
 	tempTree->prune(tolerance);
-	int result = countNodes(tempTree->root);	
+	int result = countLeaves(tempTree->root);	
 	tempTree->clear();
 	tempTree = NULL;
 	return result;
 }
 
-int Quadtree::idealPrune(int numLeaves) const{
+int Quadtree::idealPrune(int numLeaves) const
+{
+	if(root == NULL)
+		return 0;	
 	int maxTolerance = 1000;
+	int maxLeaves = countLeaves(root);
+	if(numLeaves>=maxLeaves)
+		return 0;
+	if(numLeaves<=1)
+		return findIdeal(maxTolerance-1000, maxTolerance, 1);
 	while(pruneSize(maxTolerance) > numLeaves)
 		maxTolerance += 1000;
 	return findIdeal(maxTolerance-1000, maxTolerance, numLeaves);
 }
 //helper function
-Quadtree::QuadtreeNode* Quadtree::constructQuadtree(PNG const & source, int upYaxis, int downYaxis, int leftXaxis, int rightXaxis){
+Quadtree::QuadtreeNode* Quadtree::constructQuadtree(PNG const & source, int upYaxis, int downYaxis, int leftXaxis, int rightXaxis)
+{
 	if(upYaxis+1 == downYaxis)
 	{
 	QuadtreeNode* croot = new QuadtreeNode();
@@ -276,11 +314,11 @@ bool Quadtree::meetPrune(QuadtreeNode* oneNode, QuadtreeNode* otherNode, int tol
 		return false;
 }
 
-int Quadtree::countNodes(QuadtreeNode* theNode) const
+int Quadtree::countLeaves(QuadtreeNode* theNode) const
 {
 	if(theNode->neChild == NULL)
 		return 1;
-	return (countNodes(theNode->neChild)+countNodes(theNode->nwChild)+countNodes(theNode->swChild)+countNodes(theNode->seChild));
+	return (countLeaves(theNode->neChild)+countLeaves(theNode->nwChild)+countLeaves(theNode->swChild)+countLeaves(theNode->seChild));
 }
 
 int Quadtree::findIdeal(int minTolerance, int maxTolerance, int numLeaves) const

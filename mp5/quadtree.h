@@ -75,7 +75,7 @@ class Quadtree
 	void helpPrune(QuadtreeNode* currNode, int tolerance);
 	bool checkNode(QuadtreeNode* OriginNode, QuadtreeNode* currNode, int tolerance);
 	bool meetPrune(QuadtreeNode* oneNode, QuadtreeNode* otherNode, int tolerance);
-	int countNodes(QuadtreeNode* theNode) const;
+	int countLeaves(QuadtreeNode* theNode) const;
 	int findIdeal(int minTolerance, int maxTolerance, int numLeaves) const;
 	/**** Functions added for testing/grading                ****/
 	/**** Do not remove this line or copy its contents here! ****/
