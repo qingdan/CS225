@@ -130,11 +130,9 @@ int Quadtree::pruneSize(int tolerance) const
 {
 	if(root == NULL||tolerance < 0)
 		return 0;
-	Quadtree* tempTree = new Quadtree(*this);
-	tempTree->prune(tolerance);
-	int result = countLeaves(tempTree->root);	
-	tempTree->clear();
-	tempTree = NULL;
+	Quadtree tempTree = Quadtree(*this);
+	tempTree.prune(tolerance);
+	int result = countLeaves(tempTree.root);	
 	return result;
 }
 
