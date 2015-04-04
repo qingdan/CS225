@@ -1,0 +1,92 @@
+Grading revision r33813 by kwang40, dated 2015-04-03 14:09:30.000003949 -0500 CDT
+Monad Autograder
+Testing mp5 at 2015-04-04 00:29:21
+
+"Procrastination: working tomorrow for a better today." ~ Anonymous
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_default_ctor  . . . . [1 pts] - passed
+test_ctor_1  . . . . . . . [1 pts] - passed
+test_ctor_2  . . . . . . . [2 pts] - passed
+test_buildTree_1 . . . . . [2 pts] - passed
+test_buildTree_2 . . . . . [1 pts] - passed
+test_buildTree_3 . . . . . [2 pts] - passed
+test_cctor_1 . . . . . . . [1 pts] - passed
+test_cctor_2 . . . . . . . [1 pts] - passed
+test_cctor_3 . . . . . . . [1 pts] - passed
+test_cctor_4 . . . . . . . [1 pts] - passed
+test_assign_op_1 . . . . . [1 pts] - passed
+test_assign_op_2 . . . . . [1 pts] - passed
+test_assign_op_3 . . . . . [1 pts] - passed
+test_assign_op_4 . . . . . [1 pts] - passed
+test_getPixel_1  . . . . . [1 pts] - passed
+test_getPixel_2  . . . . . [2 pts] - passed
+test_getPixel_3  . . . . . [2 pts] - passed
+test_getPixel_4  . . . . . [2 pts] - passed
+test_decompress_unpruned_1 [1 pts] - passed
+test_decompress_unpruned_2 [1 pts] - passed
+test_decompress_unpruned_3 [1 pts] - passed
+test_decompress_unpruned_4 [1 pts] - passed
+time_getPixel_logn . . . . [4 pts] - passed
+time_decompress_n (asan) . [4 pts] - passed
+valgrind_big3 (asan) . . . [4 pts] - passed
+test_clockwiseRotate_1 . . [1 pts] - passed
+test_clockwiseRotate_2 . . [1 pts] - passed
+test_clockwiseRotate_3 . . [2 pts] - passed
+test_clockwiseRotate_4 . . [2 pts] - passed
+test_prune_1 . . . . . . . [2 pts] - passed
+test_prune_2 . . . . . . . [3 pts] - passed
+test_prune_3 . . . . . . . [2 pts] - passed
+test_prune_4 . . . . . . . [5 pts] - passed
+test_prune_copy  . . . . . [2 pts] - passed
+test_prune_rotate  . . . . [2 pts] - passed
+test_prune_getPixel  . . . [3 pts] - passed
+test_pruneSize_1 . . . . . [2 pts] - passed
+test_pruneSize_2 . . . . . [2 pts] - passed
+test_pruneSize_3 . . . . . [2 pts] - passed
+test_pruneSize_4 . . . . . [2 pts] - passed
+test_pruneSize_5 . . . . . [2 pts] - passed
+test_idealPrune_1  . . . . [2 pts] - FAILED: unit_tests.cpp:457: [first.idealPrune(1) => 999] != [44802 => 44802]
+test_idealPrune_2  . . . . [3 pts] - passed
+test_idealPrune_3  . . . . [2 pts] - FAILED: Timed out (1000ms)
+test_idealPrune_4  . . . . [5 pts] - passed
+val_clockwiseRotate (asan) [2 pts] - passed
+val_prune (asan) . . . . . [4 pts] - passed
+val_idealPrune (asan)  . . [3 pts] - passed
+test_const_correctness . . [4 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 96
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+test_idealPrune_1 [2 points]
+Result: FAILED: unit_tests.cpp:457: [first.idealPrune(1) => 999] != [44802 => 44802]
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_idealPrune_3 [2 points]
+Result: FAILED: Timed out (1000ms)
+Took 1000ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 96
+
