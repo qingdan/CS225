@@ -1,0 +1,27 @@
+Grading revision r34315 by kwang40, dated 2015-04-03 21:17:11.000106536 -0500 CDT
+Monad Autograder
+Testing lab_avl at 2015-04-06 00:21:31
+
+"I hear and I forget; I see and I remember; I do and I understand." ~ Confucius
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_oneElement  . . . [10 pts] - passed
+test_simpleRotateLeft  [10 pts] - passed
+test_simpleRotateRight [10 pts] - passed
+test_threeLeftRotates  [10 pts] - passed
+test_threeRightRotates [10 pts] - passed
+test_manyRotations . . [20 pts] - passed
+test_manyInserts . . . [20 pts] - passed
+test_valgrind (asan) . [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
