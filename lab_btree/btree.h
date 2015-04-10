@@ -356,9 +356,37 @@ template <class T, class C>
 size_t insertion_idx(const std::vector< T >& elements, const C& val)
 {
     /* TODO Your code goes here! */
-    return 5;
+	size_t capacity = size_t(elements.size());
+	if (capacity == 0)
+		return 0;
+	if(elements[capacity-1]<val)
+		return capacity;
+	return search_idx(elements, val, 0, capacity-1);
 }
 
+
+template <class T, class C>
+size_t search_idx(const std::vector< T >& elements, const C& val, size_t low, size_t high)
+{
+    /* TODO Your code goes here! */
+	size_t index = (high+low)/2;
+	if(high-low == 1)
+	{
+		if(val == elements[index])
+			return index;		
+		if(val > elements[index]&&val < elements[index+1])
+			return index;
+		else
+			return index+1;
+	}
+	if(val==elements[index])
+		return index;
+	else if(val<elements[index])
+		return search_idx(elements, val, low, index+1);
+	else
+		return search_idx(elements, val, index-1, high);
+	
+}
 #include "btree_given.cpp"
 #include "btree.cpp"
 
