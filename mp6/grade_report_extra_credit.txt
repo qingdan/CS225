@@ -1,0 +1,41 @@
+Grading revision r38119 by kwang40, dated 2015-04-14 23:28:43.000809314 -0500 CDT
+Monad Autograder
+Testing mp6.1 at 2015-04-15 00:21:43
+
+"Computers are like Old Testament gods; lots of rules and no mercy." ~ Joseph Campbell
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testSmallerDimVal . . . . . [4 pts] - passed
+testShouldReplace . . . . . [4 pts] - passed
+testLinearCtor_1_10 . . . . [6 pts] - passed
+testLinearCtor_3_31 . . . . [6 pts] - passed
+testLinearCtor_2_14 . . . . [6 pts] - passed
+testLinearNNS_1_10  . . . . [6 pts] - passed
+testLinearNNS_3_31  . . . . [6 pts] - passed
+testLinearNNS_2_14  . . . . [6 pts] - passed
+testDeceptiveNNOneLevelCtor [4 pts] - passed
+testDeceptiveNNOneLevelNNS  [4 pts] - passed
+testMinesCtor . . . . . . . [4 pts] - passed
+testMinesNNS  . . . . . . . [4 pts] - passed
+testDeceptiveMinesCtor  . . [4 pts] - passed
+testDeceptiveMinesNNS . . . [4 pts] - passed
+testTieBreakingCtor . . . . [4 pts] - passed
+testTieBreakingNNS  . . . . [4 pts] - passed
+testLeftRecurseCtor . . . . [4 pts] - passed
+testLeftRecurseNNS  . . . . [4 pts] - passed
+testRandom1Ctor . . . . . . [4 pts] - passed
+testRandom1NNS  . . . . . . [4 pts] - passed
+testRandom2Ctor . . . . . . [4 pts] - passed
+testRandom2NNS  . . . . . . [4 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
