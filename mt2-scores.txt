@@ -1,0 +1,35 @@
+Score Report for kwang40:
+=============
+Q1/2        :  35 /  40
+Q3/4        :  21 /  25
+Q5/6        :  22 /  22
+Q7/8        :  13 /  13
+Total Score :  91 / 100
+
+Multiple Choice Responses
+=============
+       Your Answer
+      /   Correct Answer
+     /   /
+1.  E   E
+2.  B   B
+3.  A   A
+4.  D   D
+5.  C   C
+6.  E   E
+7.  D   D
+8.  A   A
+9.  B   B
+10. C   C
+11. A*  B
+12. A*  B
+13. E   E
+14. D   D
+15. A   A
+16. C   C
+
+This file contains your initial scores as recorded on your scantron.
+It will *not* reflect manual changes (e.g., due to regrades)
+
+The tool that generated this file is experimental.
+Please *double check* your score on both your exam and Chara.
