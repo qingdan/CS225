@@ -1,0 +1,21 @@
+Finding chars in data/mobydick.txt with frequency >= 10000 using LPHashTable...
+118966	e
+89550	t
+78953	a
+70698	o
+66668	n
+66583	i
+65010	s
+63442	h
+53339	r
+43297	l
+38767	d
+27217	u
+23653	m
+23120	c
+22500	w
+21239	g
+21227	f
+17711	p
+17209	y
+17165	b

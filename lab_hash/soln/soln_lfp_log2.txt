@@ -1,0 +1,24 @@
+Parsing logfile: data/log2.txt...
+Number of unique URLs: 10
+Printing unique URLs:
+	/product/3/
+	/product/2/
+	/product/9/
+	/product/6/
+	/product/7/
+	/product/4/
+	/product/5/
+	/product/1/
+	/product/8/
+	/product/0/
+Running sample visited queries...
+	chase visited /product/0/ on Mon Apr 11 15:05:56 2011
+	chase visited /product/1/ on Sat Apr  9 15:54:36 2011
+	chase visited /product/2/ on Tue Apr 12 15:52:58 2011
+	chase visited /product/3/ on Tue Apr 12 15:48:33 2011
+	chase visited /product/4/ on Tue Apr 12 14:21:47 2011
+	chase visited /product/5/ on Sat Apr  9 14:30:12 2011
+	chase visited /product/6/ on Mon Apr 11 16:07:27 2011
+	chase visited /product/7/ on Tue Apr 12 15:20:48 2011
+	chase visited /product/8/ on Mon Apr 11 14:31:36 2011
+	chase visited /product/9/ on Tue Apr 12 15:04:12 2011
