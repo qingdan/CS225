@@ -1,8 +1,8 @@
 Grading revision r38119 by kwang40, dated 2015-04-14 23:28:43.000809314 -0500 CDT
 Monad Autograder
-Testing mp6.1 at 2015-04-15 00:21:43
+Testing mp6.1 at 2015-04-15 18:29:25
 
-"Computers are like Old Testament gods; lots of rules and no mercy." ~ Joseph Campbell
+"I just don't trust easily, and for good reasons... which are my own." ~ Carth Onasi
 
 Setting up test environment...
 Compiling...
