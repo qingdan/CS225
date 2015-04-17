@@ -1,8 +1,8 @@
-Grading revision r38407 by tolar2, dated 2015-04-15 18:43:44.000165548 -0500 CDT
+Grading revision r38511 by tolar2, dated 2015-04-16 00:46:13.000360665 -0500 CDT
 Monad Autograder
-Testing mp6 at 2015-04-16 00:28:23
+Testing mp6 at 2015-04-17 00:26:07
 
-"Who dares to teach must never cease to learn." ~ J.C. Dana
+"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." ~ Antoine de Saint-Exupery
 
 Setting up test environment...
 Compiling...
