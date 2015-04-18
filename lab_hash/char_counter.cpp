@@ -51,3 +51,4 @@ vector< pair<char, int> > CharFreq<Dict>::getChars( int threshold ) {
     }
     return ret;
 }
+
