@@ -1,8 +1,8 @@
-Grading revision r38511 by tolar2, dated 2015-04-16 00:46:13.000360665 -0500 CDT
+Grading revision r38829 by tolar2, dated 2015-04-17 00:43:42.000645891 -0500 CDT
 Monad Autograder
-Testing mp6 at 2015-04-17 00:26:07
+Testing mp6 at 2015-04-18 00:28:35
 
-"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." ~ Antoine de Saint-Exupery
+"Optimism is an occupational hazard of programming; feedback is the treatment." ~ Kent Beck
 
 Setting up test environment...
 Compiling...
