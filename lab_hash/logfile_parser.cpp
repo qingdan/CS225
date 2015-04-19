@@ -67,7 +67,7 @@ LogfileParser::LogfileParser( const string & fname ) : whenVisitedTable( 256 ) {
          * this problem. This should also build the uniqueURLs member
          * vector as well.
          */
-		string uniqueUrl = ll.url.substr(0,12);
+		string uniqueUrl = ll.url;
 		string new_key = ll.customer.substr(1,ll.customer.size()-3);
 		new_key.append(uniqueUrl);
 		if(whenVisitedTable.keyExists(new_key))
@@ -96,7 +96,7 @@ bool LogfileParser::hasVisited( const string & customer, const string & url ) co
     /**
      * @todo Implement this function.
      */
-		string uniqueUrl = url.substr(0,12);
+		string uniqueUrl = url;
 		string new_key = customer.substr(1, customer.size()-3);
 		new_key.append(uniqueUrl);
 		return whenVisitedTable.keyExists(new_key); 
@@ -116,7 +116,7 @@ time_t LogfileParser::dateVisited( const string & customer, const string & url )
     /**
      * @todo Implement this function.
      */
-		string uniqueUrl = url.substr(0,12);
+		string uniqueUrl = url;
 		string new_key = customer.substr(1, customer.size()-3);
 		new_key.append(uniqueUrl);
 		return whenVisitedTable.find(new_key); 
