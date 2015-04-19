@@ -1,8 +1,8 @@
-Grading revision r38829 by tolar2, dated 2015-04-17 00:43:42.000645891 -0500 CDT
+Grading revision r39058 by tolar2, dated 2015-04-18 00:46:10.000226653 -0500 CDT
 Monad Autograder
-Testing mp6 at 2015-04-18 00:28:35
+Testing mp6 at 2015-04-19 00:26:04
 
-"Optimism is an occupational hazard of programming; feedback is the treatment." ~ Kent Beck
+"int getRandomNumber() { return 4; } // chosen by fair dice roll. guaranteed to be random." ~ XKCD #221
 
 Setting up test environment...
 Compiling...
