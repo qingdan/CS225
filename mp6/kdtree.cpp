@@ -6,41 +6,31 @@
 template<int Dim>
 bool KDTree<Dim>::smallerDimVal(const Point<Dim> & first, const Point<Dim> & second, int curDim) const
 {
-	if((curDim < Dim)&&(curDim >= 0))
-    {
-        if(first[curDim] < second[curDim])
-            return true;
-        else if(first[curDim] > second[curDim])
-            return false;
-        else
-            return first < second;
-    }
-    return false;
+	if(curDim < Dim && curDim >= 0)
+	{
+		if(first[curDim]!=second[curDim])
+			return first[curDim] < second[curDim];
+		return first < second;
+	}
+	return false;
 }
 
 
 template<int Dim>
 bool KDTree<Dim>::shouldReplace(const Point<Dim> & target, const Point<Dim> & currentBest, const Point<Dim> & potential) const
 {
-	int curDis = getDistance(target, currentBest);
-    int potDis = getDistance(target, potential);
-
-    if(curDis > potDis)
-        return true;
-
-    else if(curDis < potDis)
-        return false;
-    else
-        return potential < currentBest;
-    return false;
+	int currDistance = getDistance(target, currentBest);
+	int potenDistance = getDistance(target, potential);
+	if(currDistance != potenDistance)
+		return potenDistance < currDistance;
+	return potential < currentBest;
 }
 
 template<int Dim>
 KDTree<Dim>::KDTree(const vector< Point<Dim> > & newPoints)
 {
 	points = newPoints;
-    int size = points.size();
-    buildTreeHelper(0, size-1, 0);
+    buildTreeHelper(0, points.size()-1, 0);
 }
 
 template<int Dim>
@@ -59,10 +49,10 @@ Point<Dim> KDTree<Dim>::findNearestNeighbor(const Point<Dim> & query) const
 template<int Dim>
 int KDTree<Dim>::getDistance(const Point<Dim> & point1, const Point<Dim> & point2) const
 {
-    int result = 0;
-    for(int i = 0; i < Dim; i++)
-        result += (point1[i]-point2[i])*(point1[i]-point2[i]); 
-    return result;
+    int distance = 0;
+	for(int i = 0; i < Dim; i++)
+		distance += (point1[i]-point2[i])*(point1[i]-point2[i]);
+	return distance;
 }
 
 
@@ -113,10 +103,9 @@ int KDTree<Dim>::partition(int left, int right, int pivotIndex, int dimension)
 
 template<int Dim>
 void KDTree<Dim>::findNearestHelper(const Point<Dim> & query, Point<Dim> & currentBest,
-                                    int left, int right, int dimension, int minDis, 
-                                    bool & isFirst) const
+                                    int left, int right, int dimension, int minDis, bool & isFirst) const
 {
-    if(left >= right)
+      if(left >= right)
     {
         if(isFirst)
         {
@@ -130,9 +119,8 @@ void KDTree<Dim>::findNearestHelper(const Point<Dim> & query, Point<Dim> & curre
         }
         return;
     }
-
     int mid_index = (left + right)/2;
-    if(smallerDimVal(query, points[mid_index], dimension))
+     if(smallerDimVal(query, points[mid_index], dimension))
     {
         findNearestHelper(query, currentBest, left, mid_index - 1, (dimension + 1)%Dim, minDis, isFirst);
         if(shouldReplace(query, currentBest, points[mid_index]))
