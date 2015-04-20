@@ -1,8 +1,8 @@
-Grading revision r39058 by tolar2, dated 2015-04-18 00:46:10.000226653 -0500 CDT
+Grading revision r39576 by kwang40, dated 2015-04-19 17:04:33.000900809 -0500 CDT
 Monad Autograder
-Testing mp6 at 2015-04-19 00:26:04
+Testing mp6 at 2015-04-20 01:29:28
 
-"int getRandomNumber() { return 4; } // chosen by fair dice roll. guaranteed to be random." ~ XKCD #221
+"I did respond to your email, but I might have forgotten to hit send." ~ Cinda Heeren
 
 Setting up test environment...
 Compiling...
@@ -33,12 +33,12 @@ testRandom1Ctor . . . . . . [3 pts]  - passed
 testRandom1NNS  . . . . . . [3 pts]  - passed
 testRandom2Ctor . . . . . . [3 pts]  - passed
 testRandom2NNS  . . . . . . [3 pts]  - passed
-testCheckeredMosaic . . . . [12 pts] - FAILED
-testPrimaryColorMosaic  . . [6 pts]  - FAILED
-testRandomMosaic  . . . . . [6 pts]  - FAILED
+testCheckeredMosaic . . . . [12 pts] - passed
+testPrimaryColorMosaic  . . [6 pts]  - passed
+testRandomMosaic  . . . . . [6 pts]  - passed
 
 
 Total score...
 ================================================================
-TOTAL SCORE: 76
+TOTAL SCORE: 100
 
