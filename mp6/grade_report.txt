@@ -1,8 +1,8 @@
-Grading revision r39576 by kwang40, dated 2015-04-19 17:04:33.000900809 -0500 CDT
+Grading revision r40181 by tolar2, dated 2015-04-20 01:47:01.000400742 -0500 CDT
 Monad Autograder
-Testing mp6 at 2015-04-20 01:29:28
+Testing mp6 at 2015-04-21 00:27:16
 
-"I did respond to your email, but I might have forgotten to hit send." ~ Cinda Heeren
+"That's legit as shit." ~ Rick Barber
 
 Setting up test environment...
 Compiling...
