@@ -1,0 +1,44 @@
+Grading revision r40515 by tolar2, dated 2015-04-21 00:45:06.000409149 -0500 CDT
+Monad Autograder
+Testing mp6 at 2015-04-22 00:25:29
+
+"Fish are meat, they're like water poultry." ~ Chase Geigle
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testSmallerDimVal . . . . . [3 pts]  - passed
+testShouldReplace . . . . . [3 pts]  - passed
+testLinearCtor_1_10 . . . . [4 pts]  - passed
+testLinearCtor_3_31 . . . . [4 pts]  - passed
+testLinearCtor_2_14 . . . . [4 pts]  - passed
+testLinearNNS_1_10  . . . . [4 pts]  - passed
+testLinearNNS_3_31  . . . . [4 pts]  - passed
+testLinearNNS_2_14  . . . . [4 pts]  - passed
+testDeceptiveNNOneLevelCtor [4 pts]  - passed
+testDeceptiveNNOneLevelNNS  [3 pts]  - passed
+testMinesCtor . . . . . . . [3 pts]  - passed
+testMinesNNS  . . . . . . . [4 pts]  - passed
+testDeceptiveMinesCtor  . . [3 pts]  - passed
+testDeceptiveMinesNNS . . . [5 pts]  - passed
+testTieBreakingCtor . . . . [3 pts]  - passed
+testTieBreakingNNS  . . . . [3 pts]  - passed
+testLeftRecurseCtor . . . . [3 pts]  - passed
+testLeftRecurseNNS  . . . . [3 pts]  - passed
+testRandom1Ctor . . . . . . [3 pts]  - passed
+testRandom1NNS  . . . . . . [3 pts]  - passed
+testRandom2Ctor . . . . . . [3 pts]  - passed
+testRandom2NNS  . . . . . . [3 pts]  - passed
+testCheckeredMosaic . . . . [12 pts] - passed
+testPrimaryColorMosaic  . . [6 pts]  - passed
+testRandomMosaic  . . . . . [6 pts]  - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
