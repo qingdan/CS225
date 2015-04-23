@@ -99,7 +99,8 @@ T heap<T, Compare>::pop() {
 	if(_elems.size() != 1)
 	{
 		T highest_elem = *(_elems.begin()+1);
-		_elems.erase(_elems.begin()+1);
+		_elems[1] = _elems[_elems.size()-1];
+		_elems.pop_back();
 		heapifyDown(1);
 		return highest_elem;
 	}
