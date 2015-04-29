@@ -1,0 +1,24 @@
+Grading revision r43116 by kwang40, dated 2015-04-27 17:39:22.000094329 -0500 CDT
+Monad Autograder
+Testing mp7.1 at 2015-04-29 00:25:23
+
+"I just don't trust easily, and for good reasons... which are my own." ~ Carth Onasi
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+addElements1 . . . . [20 pts] - passed
+addElements2 . . . . [20 pts] - passed
+testFindAndSetUnion1 [20 pts] - passed
+testFindAndSetUnion2 [20 pts] - passed
+testFindAndSetUnion3 [20 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
