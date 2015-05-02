@@ -1,8 +1,8 @@
-Grading revision r43845 by tolar2, dated 2015-04-30 01:15:17.000695954 -0500 CDT
+Grading revision r44115 by tolar2, dated 2015-05-01 01:14:49.000252332 -0500 CDT
 Monad Autograder
-Testing mp7 at 2015-05-01 00:41:56
+Testing mp7 at 2015-05-02 00:40:43
 
-"You *could* call it an ape, and that an ape, but that would just be phylogenic pettifogging." ~ D.A. Forsyth
+"I would build pyramids, if I were Pharoah." ~ Kyle Johnson
 
 Setting up test environment...
 Compiling...
