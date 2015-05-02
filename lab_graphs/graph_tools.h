@@ -42,7 +42,7 @@ namespace GraphTools
     void findMST(Graph & graph);
 
     // define any helper functions here:
-
+	bool sort_edge (Edge a, Edge b);
 }
 
 #endif

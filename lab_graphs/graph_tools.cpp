@@ -30,7 +30,48 @@
  */
 int GraphTools::findShortestPath(Graph & graph, Vertex start, Vertex end)
 {
-    return -1;
+	vector <Vertex> vertices = graph.getVertices();
+	for(size_t i = 0; i < vertices.size(); i++)
+		graph.setVertexLabel(vertices[i], "UNEXPLORED");
+	vector <Edge> edges = graph.getEdges();
+	for(size_t i = 0; i < edges.size(); i++)
+	{	Vertex u = edges[i].source;
+		Vertex w = edges[i].dest;
+		graph.setEdgeLabel(u, w, "UNEXPLORED");
+	}
+	queue <Vertex> q;
+	unordered_map <Vertex, Vertex> parent;
+	q.push(start);
+	graph.setVertexLabel(start, "VISITED");	
+	while(!q.empty())
+	{
+		Vertex w = q.front();
+		q.pop();
+		vector <Vertex> adjacent = graph.getAdjacent(w);
+		for(size_t i = 0; i < adjacent.size(); i++)
+		{
+			if(graph.getVertexLabel(adjacent[i]) == "UNEXPLORED")
+			{
+				graph.setEdgeLabel(w, adjacent[i], "DISCOVERY");
+				graph.setVertexLabel(adjacent[i], "VISITED");
+				pair <Vertex, Vertex> pairVertex (adjacent[i], w);
+				parent.insert(pairVertex);
+				q.push(adjacent[i]); 
+			}
+			else if(graph.getEdgeLabel(w, adjacent[i]) == "UNEXPLORED")
+			{
+				graph.setEdgeLabel(w, adjacent[i], "CORSS");
+			}
+		}
+	}
+	int distance = 0;
+	while(end != start)
+	{
+		graph.setEdgeLabel(end, parent[end], "MINPATH");
+		end = parent[end];
+		distance ++;
+	}
+	return distance;	
 }
 
 /**
@@ -51,7 +92,58 @@ int GraphTools::findShortestPath(Graph & graph, Vertex start, Vertex end)
  */
 int GraphTools::findMinWeight(Graph & graph)
 {
-    return -1;
+	vector <Vertex> vertices = graph.getVertices();
+	for(size_t i = 0; i < vertices.size(); i++)
+		graph.setVertexLabel(vertices[i], "UNEXPLORED");
+	vector <Edge> edges = graph.getEdges();
+	for(size_t i = 0; i < edges.size(); i++)
+	{	Vertex u = edges[i].source;
+		Vertex w = edges[i].dest;
+		graph.setEdgeLabel(u, w, "UNEXPLORED");
+	}
+	queue <Vertex> q;
+	q.push(vertices[0]);
+	graph.setVertexLabel(vertices[0], "VISITED");	
+	Vertex startDest = (graph.getAdjacent(vertices[0]))[0];
+	int minWeight = graph.getEdgeWeight(vertices[0], startDest);
+	Vertex min1 = vertices[0];
+	Vertex min2 = startDest;
+	while(!q.empty())
+	{
+		Vertex w = q.front();
+		q.pop();
+		vector <Vertex> adjacent = graph.getAdjacent(w);
+		for(size_t i = 0; i < adjacent.size(); i++)
+		{
+			if(graph.getVertexLabel(adjacent[i]) == "UNEXPLORED")
+			{
+				graph.setEdgeLabel(w, adjacent[i], "DISCOVERY");
+				graph.setVertexLabel(adjacent[i], "VISITED");
+				int currWeight = graph.getEdgeWeight(adjacent[i], w);
+				if(currWeight < minWeight)
+				{
+					minWeight = currWeight;
+					min1 = w;
+					min2 = adjacent[i];
+				}
+				q.push(adjacent[i]); 
+			}
+			else if(graph.getEdgeLabel(w, adjacent[i]) == "UNEXPLORED")
+			{
+				graph.setEdgeLabel(w, adjacent[i], "CORSS");
+				int currWeight = graph.getEdgeWeight(adjacent[i], w);
+				if(currWeight < minWeight)
+				{
+					minWeight = currWeight;
+					min1 = w;
+					min2 = adjacent[i];
+				}
+			}
+		}
+	}
+	
+	graph.setEdgeLabel(min1, min2, "MIN");
+	return minWeight;
 }
 
 /**
@@ -70,5 +162,32 @@ int GraphTools::findMinWeight(Graph & graph)
  */
 void GraphTools::findMST(Graph & graph)
 {
+	vector< Vertex > vertices = graph.getVertices();
+	int numVertices = vertices.size();
+	DisjointSets setofvertices;
+	setofvertices.addelements(numVertices);
 
+	int count = 0;
+
+	vector< Edge > vectorofedges = graph.getEdges();
+	int numEdges = vectorofedges.size();
+	std::sort(vectorofedges.begin(), vectorofedges.end(), sort_edge);
+
+	for(int i = 0; i < numEdges && count < numVertices - 1; i++)
+	{
+		Vertex u = vectorofedges[i].source;
+		Vertex v = vectorofedges[i].dest;
+		if(setofvertices.find(u) != setofvertices.find(v))
+		{
+			setofvertices.setunion(u, v);
+			graph.setEdgeLabel(u, v, "MST");
+			count++;
+		}
+	}
+
+
+}
+
+bool GraphTools::sort_edge (Edge u, Edge v) {
+    return (u.weight < v.weight);
 }
