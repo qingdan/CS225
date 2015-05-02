@@ -163,23 +163,23 @@ int GraphTools::findMinWeight(Graph & graph)
 void GraphTools::findMST(Graph & graph)
 {
 	vector< Vertex > vertices = graph.getVertices();
-	int numVertices = vertices.size();
-	DisjointSets setofvertices;
-	setofvertices.addelements(numVertices);
+	int numOfVertex = vertices.size();
+	DisjointSets setVertices;
+	setVertices.addelements(numOfVertex);
 
 	int count = 0;
 
-	vector< Edge > vectorofedges = graph.getEdges();
-	int numEdges = vectorofedges.size();
-	std::sort(vectorofedges.begin(), vectorofedges.end(), sort_edge);
+	vector< Edge > edges = graph.getEdges();
+	int numEdges = edges.size();
+	std::sort(edges.begin(), edges.end(), sort_edge);
 
-	for(int i = 0; i < numEdges && count < numVertices - 1; i++)
+	for(int i = 0; i < numEdges && count < numOfVertex - 1; i++)
 	{
-		Vertex u = vectorofedges[i].source;
-		Vertex v = vectorofedges[i].dest;
-		if(setofvertices.find(u) != setofvertices.find(v))
+		Vertex u = edges[i].source;
+		Vertex v = edges[i].dest;
+		if(setVertices.find(u) != setVertices.find(v))
 		{
-			setofvertices.setunion(u, v);
+			setVertices.setunion(u, v);
 			graph.setEdgeLabel(u, v, "MST");
 			count++;
 		}
