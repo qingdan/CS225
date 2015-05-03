@@ -1,8 +1,8 @@
-Grading revision r44115 by tolar2, dated 2015-05-01 01:14:49.000252332 -0500 CDT
+Grading revision r44394 by tolar2, dated 2015-05-02 01:12:36.000731251 -0500 CDT
 Monad Autograder
-Testing mp7 at 2015-05-02 00:40:43
+Testing mp7 at 2015-05-03 00:43:47
 
-"I would build pyramids, if I were Pharoah." ~ Kyle Johnson
+"You didn't write that. I wrote that." ~ Matt Joras
 
 Setting up test environment...
 Compiling...
@@ -636,10 +636,10 @@ void copyMaze(const MazeReader & source, SquareMaze * dest);
 unit_tests.cpp:364:2: error: unknown type name 'SquareMaze'
         SquareMaze maze;
         ^
-5 errors generated.
 unit_tests.cpp:111:26: error: unknown type name 'SquareMaze'
 void assert_maze_acyclic(SquareMaze & maze, int width, int height);
                          ^
+5 errors generated.
 unit_tests.cpp:112:28: error: unknown type name 'SquareMaze'
 void assert_maze_connected(SquareMaze & maze, int width, int height);
                            ^
@@ -668,13 +668,13 @@ void copyMaze(const MazeReader & source, SquareMaze * dest);
 unit_tests.cpp:387:2: error: unknown type name 'SquareMaze'
         SquareMaze maze;
         ^
-5 errors generated.
 unit_tests.cpp:111:26: error: unknown type name 'SquareMaze'
 void assert_maze_acyclic(SquareMaze & maze, int width, int height);
                          ^
 unit_tests.cpp:112:28: error: unknown type name 'SquareMaze'
 void assert_maze_connected(SquareMaze & maze, int width, int height);
                            ^
+5 errors generated.
 unit_tests.cpp:113:23: error: unknown type name 'SquareMaze'
 void assert_maze_tree(SquareMaze & maze, int width, int height);
                       ^
@@ -691,9 +691,24 @@ void assert_maze_acyclic(SquareMaze & maze, int width, int height);
 unit_tests.cpp:112:28: error: unknown type name 'SquareMaze'
 void assert_maze_connected(SquareMaze & maze, int width, int height);
                            ^
+unit_tests.cpp:111:26: error: unknown type name 'SquareMaze'
+void assert_maze_acyclic(SquareMaze & maze, int width, int height);
+                         ^
 unit_tests.cpp:113:23: error: unknown type name 'SquareMaze'
 void assert_maze_tree(SquareMaze & maze, int width, int height);
                       ^
+unit_tests.cpp:112:28: error: unknown type name 'SquareMaze'
+void assert_maze_connected(SquareMaze & maze, int width, int height);
+                           ^
+unit_tests.cpp:114:42: error: unknown type name 'SquareMaze'
+void copyMaze(const MazeReader & source, SquareMaze * dest);
+                                         ^
+unit_tests.cpp:113:23: error: unknown type name 'SquareMaze'
+void assert_maze_tree(SquareMaze & maze, int width, int height);
+                      ^
+unit_tests.cpp:453:2: error: unknown type name 'SquareMaze'
+        SquareMaze maze;
+        ^
 unit_tests.cpp:114:42: error: unknown type name 'SquareMaze'
 void copyMaze(const MazeReader & source, SquareMaze * dest);
                                          ^
@@ -701,6 +716,7 @@ unit_tests.cpp:411:2: error: unknown type name 'SquareMaze'
         SquareMaze maze;
         ^
 5 errors generated.
+5 errors generated.
 unit_tests.cpp:111:26: error: unknown type name 'SquareMaze'
 void assert_maze_acyclic(SquareMaze & maze, int width, int height);
                          ^
@@ -710,19 +726,18 @@ void assert_maze_connected(SquareMaze & maze, int width, int height);
 unit_tests.cpp:113:23: error: unknown type name 'SquareMaze'
 void assert_maze_tree(SquareMaze & maze, int width, int height);
                       ^
-unit_tests.cpp:114:42: error: unknown type name 'SquareMaze'
-void copyMaze(const MazeReader & source, SquareMaze * dest);
-                                         ^
-unit_tests.cpp:453:2: error: unknown type name 'SquareMaze'
-        SquareMaze maze;
-        ^
-5 errors generated.
 unit_tests.cpp:111:26: error: unknown type name 'SquareMaze'
 void assert_maze_acyclic(SquareMaze & maze, int width, int height);
                          ^
+unit_tests.cpp:114:42: error: unknown type name 'SquareMaze'
+void copyMaze(const MazeReader & source, SquareMaze * dest);
+                                         ^
 unit_tests.cpp:112:28: error: unknown type name 'SquareMaze'
 void assert_maze_connected(SquareMaze & maze, int width, int height);
                            ^
+unit_tests.cpp:468:2: error: unknown type name 'SquareMaze'
+        SquareMaze maze;
+        ^
 unit_tests.cpp:113:23: error: unknown type name 'SquareMaze'
 void assert_maze_tree(SquareMaze & maze, int width, int height);
                       ^
@@ -733,23 +748,8 @@ unit_tests.cpp:425:2: error: unknown type name 'SquareMaze'
         SquareMaze maze;
         ^
 5 errors generated.
-unit_tests.cpp:111:26: error: unknown type name 'SquareMaze'
-void assert_maze_acyclic(SquareMaze & maze, int width, int height);
-                         ^
-unit_tests.cpp:112:28: error: unknown type name 'SquareMaze'
-void assert_maze_connected(SquareMaze & maze, int width, int height);
-                           ^
-unit_tests.cpp:113:23: error: unknown type name 'SquareMaze'
-void assert_maze_tree(SquareMaze & maze, int width, int height);
-                      ^
-unit_tests.cpp:114:42: error: unknown type name 'SquareMaze'
-void copyMaze(const MazeReader & source, SquareMaze * dest);
-                                         ^
-unit_tests.cpp:468:2: error: unknown type name 'SquareMaze'
-        SquareMaze maze;
-        ^
-5 errors generated.
 ld: no input files
+5 errors generated.
 clang-3.5: error: no such file or directory: 'unit_tests.o'
 make: *** [proxy] Error 1
 make: *** Waiting for unfinished jobs....
