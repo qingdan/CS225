@@ -1,0 +1,28 @@
+Grading revision r44463 by kwang40, dated 2015-05-02 15:00:01.000782178 -0500 CDT
+Monad Autograder
+Testing lab_graphs at 2015-05-04 00:27:38
+
+"When you say 'You suck', I think 'I win'." ~ Michael Lopp
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+minWeight_OneEdge_ReturnValue . [10 pts] - passed
+minWeight_OneEdge_EdgeLabel . . [10 pts] - passed
+minWeight_MultiEdge_ReturnValue [10 pts] - passed
+minWeight_MultiEdge_EdgeLabels  [15 pts] - passed
+minPath_OneEdge_ReturnValue . . [10 pts] - passed
+minPath_OneEdge_EdgeLabel . . . [10 pts] - passed
+minPath_MultiEdge_ReturnValue . [10 pts] - passed
+minPath_MultiEdge_EdgeLabels  . [10 pts] - passed
+kruskal_all . . . . . . . . . . [15 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
