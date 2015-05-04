@@ -19,7 +19,9 @@ int DisjointSets::find (int elem)
 void DisjointSets::setunion (int a, int b)
 {
 	int root1 = find(a);
-	int root2 = find(b);	
+	int root2 = find(b);
+	if(root1 == root2)
+		return;	
 	int newSize = sets[root1] + sets[root2];
 	if(sets[root1] <= sets[root2])//meaning root1 is more negative, root1 is bigger
 	{
@@ -31,5 +33,6 @@ void DisjointSets::setunion (int a, int b)
 		sets[root1] = root2;
 		sets[root2] = newSize;
 	}
+	return;
 }
 
