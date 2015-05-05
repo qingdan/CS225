@@ -1,8 +1,8 @@
-Grading revision r45466 by kwang40, dated 2015-05-03 22:53:53.000862555 -0500 CDT
+Grading revision r45792 by tolar2, dated 2015-05-04 01:52:43.000969723 -0500 CDT
 Monad Autograder
-Testing mp7 at 2015-05-04 01:18:25
+Testing mp7 at 2015-05-05 10:59:07
 
-"The most amazing achievement of the computer software industry is its continuing cancellation of the steady and staggering gains made by the computer hardware industry." ~ Henry Petroski
+"If at first you don't succeed, that's one data point." ~ Randall Munroe
 
 Setting up test environment...
 Compiling...
