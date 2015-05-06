@@ -1,0 +1,39 @@
+Grading revision r46471 by tolar2, dated 2015-05-05 11:34:17.000822747 -0500 CDT
+Monad Autograder
+Testing mp7 at 2015-05-06 00:53:58
+
+"Fish are meat, they're like water poultry." ~ Chase Geigle
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+addElements1  . . . . . . [5 pts] - passed
+addElements2  . . . . . . [5 pts] - passed
+testFindAndSetUnion1  . . [5 pts] - passed
+testFindAndSetUnion2  . . [5 pts] - passed
+testFindAndSetUnion3  . . [5 pts] - passed
+testMakeSmallMaze . . . . [5 pts] - passed
+testMakeMazeConnected . . [5 pts] - passed
+testMakeMazeAcyclic . . . [5 pts] - passed
+testMakeMazeTree1000  . . [5 pts] - passed
+testMakeMazeRandom  . . . [5 pts] - passed
+testSolveMazeValidPath  . [5 pts] - passed
+testSolutionBottomRow . . [5 pts] - passed
+testSolutionCorrectSquare [5 pts] - passed
+testSolveMazeSmall  . . . [5 pts] - passed
+testSolveMazeLarge  . . . [5 pts] - passed
+testDrawMazeSmall . . . . [5 pts] - passed
+testDrawMazeMed . . . . . [5 pts] - passed
+testDrawMazeLarge . . . . [5 pts] - passed
+testDrawSolutionMed . . . [5 pts] - passed
+testDrawSolutionLarge . . [5 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
