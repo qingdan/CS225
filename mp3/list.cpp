@@ -33,10 +33,10 @@ void List<T>::clear()
 	ListNode* current = head;
 	while(current != NULL)
 	{
-	ListNode* clear_prev;
-	clear_prev = current;	
-	current = current->next;
-	delete clear_prev;
+		ListNode* clear_prev;
+		clear_prev = current;	
+		current = current->next;
+		delete clear_prev;
 	}
 	tail = NULL;
 	length = 0;
@@ -55,16 +55,16 @@ void List<T>::insertFront(T const & ndata)
 	ListNode * Insert_node = new ListNode(ndata);
 	if(head != NULL)
 	{	
-	Insert_node->next = head;
-	head->prev = Insert_node;
-	head = Insert_node;
+		Insert_node->next = head;
+		head->prev = Insert_node;
+		head = Insert_node;
 	}
 	else
 	{
-	Insert_node->prev = NULL;
-	Insert_node->next = NULL;
-	head = Insert_node;
-	tail = head;
+		Insert_node->prev = NULL;
+		Insert_node->next = NULL;
+		head = Insert_node;
+		tail = head;
 	}
 	length++;
 	Insert_node = NULL;
@@ -83,16 +83,16 @@ void List<T>::insertBack( const T & ndata )
 	ListNode * Insert_node = new ListNode(ndata);
 	if(tail != NULL)
 	{	
-	Insert_node->prev = tail;
-	tail->next = Insert_node;
-	tail = Insert_node;
+		Insert_node->prev = tail;
+		tail->next = Insert_node;
+		tail = Insert_node;
 	}
 	else
 	{
-	Insert_node->prev = NULL;
-	Insert_node->next = NULL;
-	head = Insert_node;
-	tail = head;
+		Insert_node->prev = NULL;
+		Insert_node->next = NULL;
+		head = Insert_node;
+		tail = head;
 	}
 	length++;
 	Insert_node = NULL;
@@ -126,18 +126,18 @@ void List<T>::reverse( ListNode * & startPoint, ListNode * & endPoint )
     /// @todo Graded in MP3.1
     //first find the length of the reverse part
 	if(startPoint == endPoint||startPoint == NULL || endPoint == NULL)
-        return;
+ 	       return;
 	ListNode * origin_start = startPoint;
 	ListNode * origin_start_prev = startPoint->prev;
 	ListNode * origin_end = endPoint;
 	ListNode * origin_end_next = endPoint->next;
 	while(startPoint != endPoint)
-		{
+	{
 		ListNode * temp = startPoint->prev;		
 		startPoint->prev = startPoint->next;
 		startPoint->next = temp;
 		startPoint = startPoint->prev;
-		}
+	}
 	ListNode * temp = startPoint->prev;		
 	startPoint->prev = origin_start_prev;
 	startPoint->next = temp;
@@ -175,8 +175,8 @@ void List<T>::reverseNth( int n )
 		endPoint = startPoint;
 		for(int i = 0; i < n-1; i++)
 		{
-		if(endPoint->next != NULL)		
-		endPoint = endPoint->next;
+			if(endPoint->next != NULL)		
+			endPoint = endPoint->next;
 		}
 		reverse(startPoint, endPoint);
 		startPoint = endPoint->next;
@@ -199,20 +199,20 @@ void List<T>::waterfall()
 {
     /// @todo Graded in MP3.1
 	if(head == NULL||head->next == NULL)
-	return;
+		return;
 	ListNode* track = head;
 	ListNode* hold = track->next;
 	while(track->next->next != NULL&& track->next != NULL )
 	{
-	track = track->next;
-	track->prev->next = track->next;
-	track->next->prev = track->prev;
-	hold = track->next;
-	tail->next = track;
-	track->prev = tail;
-	track->next = NULL;
-	tail = track;
-	track = hold;
+		track = track->next;
+		track->prev->next = track->next;
+		track->next->prev = track->prev;
+		hold = track->next;
+		tail->next = track;
+		track->prev = tail;
+		track->next = NULL;
+		tail = track;
+		track = hold;
 	}
 }
 
@@ -281,10 +281,10 @@ typename List<T>::ListNode * List<T>::split(ListNode * start, int splitPoint)
 {
     /// @todo Graded in MP3.2
 	if(start == NULL||splitPoint == 0)
-	return start;
+		return start;
     	ListNode* newHead = head;
 	for(int i = 0; i < splitPoint; i++)
-	newHead = newHead->next;
+		newHead = newHead->next;
 	newHead->prev->next = NULL;
 	newHead->prev = NULL;
 	return newHead;
@@ -340,40 +340,40 @@ typename List<T>::ListNode * List<T>::merge(ListNode * first, ListNode * second)
 	ListNode * newHead = first;
 	if(first->data < second->data)
 	{
-	trackOfFirst = first->next;
+		trackOfFirst = first->next;
 	}	
 	else
 	{
-	newHead = second;
-	trackOfSecond = second->next;
+		newHead = second;
+		trackOfSecond = second->next;
 	}
 	ListNode * trackOfResult = newHead;
 	while(trackOfFirst != NULL&&trackOfSecond != NULL)
 	{
-	if(trackOfFirst->data < trackOfSecond->data||trackOfSecond == NULL)
-	{
-	trackOfResult->next = trackOfFirst;
-	trackOfFirst->prev = trackOfResult;
-	trackOfResult = trackOfFirst;
-	trackOfFirst = trackOfFirst->next;
-	}
-	else
-	{
-	trackOfResult->next = trackOfSecond;
-	trackOfSecond->prev = trackOfResult;
-	trackOfResult = trackOfSecond;
-	trackOfSecond = trackOfSecond->next;
-	}
+		if(trackOfFirst->data < trackOfSecond->data||trackOfSecond == NULL)
+		{
+			trackOfResult->next = trackOfFirst;
+			trackOfFirst->prev = trackOfResult;
+			trackOfResult = trackOfFirst;
+			trackOfFirst = trackOfFirst->next;
+		}
+		else
+		{
+			trackOfResult->next = trackOfSecond;
+			trackOfSecond->prev = trackOfResult;
+			trackOfResult = trackOfSecond;
+			trackOfSecond = trackOfSecond->next;
+		}
 	}
 	if(trackOfFirst == NULL)
 	{
-	trackOfResult->next = trackOfSecond;
-	trackOfSecond->prev = trackOfResult; 
+		trackOfResult->next = trackOfSecond;
+		trackOfSecond->prev = trackOfResult; 
 	}
 	else
 	{
-	trackOfResult->next = trackOfFirst;
-	trackOfFirst->prev = trackOfResult; 
+		trackOfResult->next = trackOfFirst;
+		trackOfFirst->prev = trackOfResult; 
 	}
 	second = NULL;
 	return newHead;
@@ -408,18 +408,20 @@ typename List<T>::ListNode * List<T>::mergesort(ListNode * start, int chainLengt
     /// @todo Graded in MP3.2
 	ListNode * headForMergesort = start;
    	if (chainLength == 1)
-	{start->next = start->prev = NULL;
-	return start;}
+	{
+		start->next = start->prev = NULL;
+		return start;
+	}
 	else
 	{
-	ListNode * secondStart = start;
-	for(int i = 0; i < chainLength/2; i++)
-		secondStart = secondStart->next;
-	secondStart->prev->next = NULL;
-	secondStart->prev = NULL;	
-	start = mergesort(start, chainLength/2);
-	secondStart = mergesort(secondStart, chainLength-chainLength/2);
-	headForMergesort = merge(start, secondStart);
+		ListNode * secondStart = start;
+		for(int i = 0; i < chainLength/2; i++)
+			secondStart = secondStart->next;
+		secondStart->prev->next = NULL;
+		secondStart->prev = NULL;	
+		start = mergesort(start, chainLength/2);
+		secondStart = mergesort(secondStart, chainLength-chainLength/2);
+		headForMergesort = merge(start, secondStart);
 	}
 	return headForMergesort;
 }
